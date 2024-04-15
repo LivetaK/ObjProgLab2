@@ -1,0 +1,10 @@
+.vs/
+
+CMakeFiles/
+Debug/
+out/build/
+
+*.suo
+*.user
+*.vcxproj
+*.vcxproj.filters
