@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.8)
 
-project("V1")
+project("opld2")
 
 add_executable(strategy1_deque
     1STRATEGIJA/Deque/testavimas.cpp
