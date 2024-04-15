@@ -3,12 +3,16 @@
 CMakeFiles/
 Debug/
 out/build/
+testavimas/
+x64/
 
 *.suo
 *.user
 *.vcxproj
 *.vcxproj.filters
 *.sln
+*.aps
+*.rc
 
 cmake_install.cmake
 CMakeCache.txt
