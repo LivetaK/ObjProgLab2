@@ -199,7 +199,7 @@ void failuNuskaitymas(vector<mok>& studentai, string& failoPavadinimas) {
         }
     } while (!file.is_open());
 
-    int pazymys;
+
     int laikinas = 0;
     string line;
     istringstream iss;
