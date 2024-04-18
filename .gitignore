@@ -10,7 +10,8 @@ x64/
 *.user
 *.vcxproj
 *.vcxproj.filters
-*.sln
+
+
 *.aps
 *.rc
 
