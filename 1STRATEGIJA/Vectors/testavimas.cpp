@@ -2,6 +2,9 @@
 
 int main() {
     int pirmasPasirinkimas, antrasPasirinkimas, treciasPasirinkimas, ketvirtasPasirinkimas, n;
+    string vardas, pavarde;
+    int pazymys, egzaminas;
+    vector<int> pazymiai;
     vector<mok> studentai;
 
     string vardai[] = { "Liveta", "Roberta", "Paulina", "Ugne", "Gabriele", "Kamile", "Marija", "Rugile", "Jovita", "Adriana" };
@@ -36,21 +39,24 @@ int main() {
                 mok naujasStud;
                 for (int i = 0; i < n; i++) {
                     cout << "Iveskite studento varda ir pavarde: " << endl;
-                    cin >> naujasStud.var >> naujasStud.pav;
-                    int pazymys;
+                    cin >> vardas >> pavarde;
+                    naujasStud.setvar(vardas);
+                    naujasStud.setpav(pavarde);
+                    int pazymiukiekis;
                     cout << "Kiek pazymiu norite, kad programa sugeneruotu?: " << endl;
-                    while (!(cin >> pazymys) || pazymys < 1) {
+                    while (!(cin >> pazymiukiekis) || pazymiukiekis < 1) {
                         cout << "Neteisinga ivestis, bandykite dar karta" << endl;
                         cin.clear();
                         cin.ignore(numeric_limits<streamsize>::max(), '\n');
                     };
                     int sum = 0;
-                    for (int j = 0; j < pazymys; j++) {
+                    for (int j = 0; j < pazymiukiekis; j++) {
                         int rand_paz = rand() % 10 + 1;
-                        naujasStud.nd.push_back(rand_paz);
+                        pazymiai.push_back(rand_paz);
                         sum += rand_paz;
                     }
-                    naujasStud.eg = rand() % 10 + 1;
+                    naujasStud.setnd(pazymiai);
+                    naujasStud.seteg(rand() % 10 + 1);
                     studentai.push_back(naujasStud);
                 }
                 calculateResults(studentai);
@@ -65,23 +71,24 @@ int main() {
                     cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 };
                 cout << "Kiek pazymiu norite, kad programa sugeneruotu kiekvienam studentui?" << endl;
-                int pazymys;
-                while (!(cin >> pazymys) || pazymys < 1) {
+                int pazymiukiekis;
+                while (!(cin >> pazymiukiekis) || pazymiukiekis < 1) {
                     cout << "Neteisinga ivestis, bandykite dar karta" << endl;
                     cin.clear();
                     cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 };
                 mok naujasStud;
                 for (int i = 0; i < n; i++) {
-                    naujasStud.var = vardai[rand() % (sizeof(vardai) / sizeof(vardai[0]))];
-                    naujasStud.pav = pavardes[rand() % (sizeof(pavardes) / sizeof(pavardes[0]))];
+                    naujasStud.setvar(vardai[rand() % (sizeof(vardai) / sizeof(vardai[0]))]);
+                    naujasStud.setpav(pavardes[rand() % (sizeof(pavardes) / sizeof(pavardes[0]))]);
                     double sum = 0;
-                    for (int j = 0; j < pazymys; j++) {
+                    for (int j = 0; j < pazymiukiekis; j++) {
                         int rand_paz = rand() % 10 + 1;
-                        naujasStud.nd.push_back(rand_paz);
+                        pazymiai.push_back(rand_paz);
+                        naujasStud.setnd(pazymiai);
                         sum += rand_paz;
                     }
-                    naujasStud.eg = rand() % 10 + 1;
+                    naujasStud.seteg(rand() % 10 + 1);
                     studentai.push_back(naujasStud);
                 }
                 calculateResults(studentai);

@@ -6,7 +6,7 @@
 #include <algorithm>
 #include <numeric>
 #include <ctime>
-#include "fstream"
+#include <fstream>
 #include <sstream>
 #include <string>
 #include <chrono>
@@ -15,11 +15,57 @@
 using namespace std;
 using namespace std::chrono;
 
-struct mok {
+class mok {
+private:
     string var, pav;
     vector<int> nd;
     int eg;
     double gal_vid, gal_med;
+public:
+    void setvar(string vardas) {
+        var = vardas;
+    }
+    string getvar() const{
+        return var;
+    }
+    void setpav(string pavarde) {
+        pav = pavarde;
+    }
+    string getpav() const {
+        return pav;
+    }
+    void seteg(int egzaminas) {
+        eg = egzaminas;
+    }
+    int geteg()const {
+        return eg;
+    }
+    void setgal_vid(double Gal_vid) {
+        gal_vid = Gal_vid;
+    }
+    double getgal_vid() const {
+        return gal_vid;
+    }
+    void setgal_med(double Gal_med) {
+        gal_med = Gal_med;
+    }
+    double getgal_med() const {
+        return gal_med;
+    }
+    void setnd(vector <int>& ND) {
+        nd = ND;
+    }
+    vector<int> getnd() const{
+    }
+
+    void isvalymas() {
+        nd.clear();
+        var.clear();
+        pav.clear();
+        eg = 0;
+        gal_vid = 0;
+        gal_med = 0;
+    }
 };
 
 void ivedimas(vector<mok>& stud);
