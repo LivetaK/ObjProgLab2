@@ -11,31 +11,6 @@ KAIP VEIKIA PROGRAMA
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V1.0 TESTAVIMAS
 
 ---------------------------------------------------------
@@ -315,6 +290,29 @@ apibendrintai:
 
 
 
+V1.1 TESTAVIMAS
 
+
+CLASS VS STRUCT
+
+
+struct:
+
+
+![Screenshot 2024-04-23 230651](https://github.com/LivetaK/ObjProgLab2/assets/159531709/590b1ae8-f7b9-4498-8e31-71df0c0c2c94)
+![Screenshot 2024-04-23 230622](https://github.com/LivetaK/ObjProgLab2/assets/159531709/e5b8b8d3-b8f6-46a7-945d-4cdeea9eec32)
+
+
+
+
+class:
+
+
+![Screenshot 2024-04-23 222206](https://github.com/LivetaK/ObjProgLab2/assets/159531709/866d526c-87a0-45bc-8772-d7cad0ef8686)
+![Screenshot 2024-04-23 222247](https://github.com/LivetaK/ObjProgLab2/assets/159531709/42503239-01ce-45dd-9233-9a89788fc126)
+
+
+
+Kaip matome, programa su struktūra veikia greičiau.
 
 
