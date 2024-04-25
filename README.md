@@ -316,3 +316,16 @@ class:
 Kaip matome, programa su struktūra veikia greičiau.
 
 
+OPTIMIZAVIMAS
+
+
+Klasės optimizavimas:
+
+
+100 000 studentų:
+
+
+![Screenshot 2024-04-25 205930](https://github.com/LivetaK/ObjProgLab2/assets/159531709/22a24ee6-8e95-4071-9c40-5f0886252fb9)
+![Screenshot 2024-04-25 210127](https://github.com/LivetaK/ObjProgLab2/assets/159531709/962bfd12-672f-4223-a249-b02430d6c516)
+![Screenshot 2024-04-25 210259](https://github.com/LivetaK/ObjProgLab2/assets/159531709/d8712485-a07f-4fa8-b04e-347458f1c51f)
+
