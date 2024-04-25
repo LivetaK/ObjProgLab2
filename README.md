@@ -329,3 +329,19 @@ Klasės optimizavimas:
 ![Screenshot 2024-04-25 210127](https://github.com/LivetaK/ObjProgLab2/assets/159531709/962bfd12-672f-4223-a249-b02430d6c516)
 ![Screenshot 2024-04-25 210259](https://github.com/LivetaK/ObjProgLab2/assets/159531709/d8712485-a07f-4fa8-b04e-347458f1c51f)
 
+
+1 000 000 studentų:
+
+
+![Screenshot 2024-04-25 205956](https://github.com/LivetaK/ObjProgLab2/assets/159531709/8aaa87a9-3d08-4f7a-9983-b5893830c3f4)
+![Screenshot 2024-04-25 210202](https://github.com/LivetaK/ObjProgLab2/assets/159531709/0afe5ac8-a4e0-4e08-80f8-d6785fcda2d0)
+![Screenshot 2024-04-25 210503](https://github.com/LivetaK/ObjProgLab2/assets/159531709/c68a09ff-23f8-4444-b0a6-236b5fc3ea38)
+
+
+
+Struktūros optimizavimas:
+
+
+
+
+
