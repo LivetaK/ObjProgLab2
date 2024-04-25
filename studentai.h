@@ -17,18 +17,19 @@ using namespace std::chrono;
 
 class mok {
 private:
-    string var, pav;
     vector<int> nd;
+    string var, pav;
     int eg;
     double gal_vid, gal_med;
 public:
-    void setvar(string vardas) {
+
+    void setvar(string& vardas) {
         var = vardas;
     }
-    string getvar() const{
+    string getvar() const {
         return var;
     }
-    void setpav(string pavarde) {
+    void setpav(string& pavarde) {
         pav = pavarde;
     }
     string getpav() const {
@@ -52,10 +53,17 @@ public:
     double getgal_med() const {
         return gal_med;
     }
-    void setnd(vector <int>& ND) {
+    void setviennd(int naujasnd) {
+        nd.push_back(naujasnd);
+    }
+    int getviennd(const vector<int>& ND, int i)const {
+        return ND[i];
+    }
+    void setnd(const vector<int>& ND) {
         nd = ND;
     }
-    vector<int> getnd() const{
+    vector<int> getnd() const {
+        return nd;
     }
 
     void isvalymas() {
@@ -80,7 +88,7 @@ bool pagalMediana(const mok& a, const mok& b);
 bool pagalVidurki(const mok& a, const mok& b);
 milliseconds trukmesSkaiciavimas(high_resolution_clock::time_point pradzia, high_resolution_clock::time_point pabaiga);
 void failuGeneravimas(int studentuKiekis, const string& failoPavadinimas);
-void konteineriai(int studentuKiekis, vector<mok>& studentai, char a, vector<mok>& vargsiukai, vector<mok>& kietiakai);
+void konteineriai(int studentuKiekis, vector<mok>& studentai, char a, vector<mok>& vargsiukai);
 void isvalymas(vector<mok>& vektorius);
 void failuNuskaitymas(vector<mok>& studentai, string& failoPavadinimas);
 int pirmasP(int& pirmasPasirinkimas);
