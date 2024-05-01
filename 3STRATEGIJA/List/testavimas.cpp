@@ -103,7 +103,7 @@ int main() {
     else { //NORIMA DUOMENIS SKAITYTI IS FAILO
 
         // FAILU GENERAVIMAS
-        /*cout << "Kiek studentu norite, kad programa sugeneruotu?" << endl;
+        cout << "Kiek studentu norite, kad programa sugeneruotu?" << endl;
         int studentuKiekis;
         while (!(cin >> studentuKiekis) || studentuKiekis < 0) {
             cout << "Neteisinga ivestis, bandykite dar karta" << endl;
@@ -116,12 +116,12 @@ int main() {
         auto failoGeneravimoPabaiga = high_resolution_clock::now();
         cout << "--------------------------------------------------------" << endl;
         cout << "failas sugeneruotas" << endl;
-        cout << "--------------------------------------------------------" << endl;*/
+        cout << "--------------------------------------------------------" << endl;
 
         // FAILAS JAU EGZISTUOJA (TYRIMUI)
 
-        int studentuKiekis = 10000000;
-        string failoPavadinimas = "studentai" + to_string(studentuKiekis) + ".txt";
+        //int studentuKiekis = 10000000;
+        //string failoPavadinimas = "studentai" + to_string(studentuKiekis) + ".txt";
 
         //NUSKAITYMAS IS FAILO
         auto nuskaitymoPradzia = high_resolution_clock::now();
@@ -158,14 +158,12 @@ int main() {
             cout << "--------------------------------------------------------" << endl;
 
             //KONTEINERIU KURIMAS
-            list<mok> vargsiukai;
             list<mok> kietiakai;
 
             char kl = rikiavimoklausimas();
-
             auto rusiavimoPradzia = high_resolution_clock::now();
 
-            konteineriai(studentuKiekis, studentai, kl, vargsiukai, kietiakai);
+            konteineriai(studentuKiekis, studentai, kl, kietiakai);
 
             auto rusiavimoPabaiga = high_resolution_clock::now();
 
@@ -179,7 +177,7 @@ int main() {
             auto isvedimoPradzia = high_resolution_clock::now();
 
             cout << "VARGSIUKAI:" << endl;
-            isvedimas(vargsiukai, cout, kl);
+            isvedimas(studentai, cout, kl);
 
             cout << "KIETIAKAI: " << endl;
             isvedimas(kietiakai, cout, kl);
@@ -222,13 +220,12 @@ int main() {
             //RIKIAVIMAS BAIGTAS
 
             //KONTEINERIU KURIMAS
-            list<mok> vargsiukai;
             list<mok> kietiakai;
 
             char kl = rikiavimoklausimas();
 
             auto rusiavimoPradzia = high_resolution_clock::now();
-            konteineriai(studentuKiekis, studentai, kl, vargsiukai, kietiakai);
+            konteineriai(studentuKiekis, studentai, kl, kietiakai);
             auto rusiavimoPabaiga = high_resolution_clock::now();
 
             cout << "--------------------------------------------------------" << endl;
@@ -237,7 +234,7 @@ int main() {
 
             //ISVEDIMAS
             auto isvedimoPradzia = high_resolution_clock::now();
-            isvedimas(vargsiukai, out1, kl);
+            isvedimas(studentai, out1, kl);
             isvedimas(kietiakai, out2, kl);
             auto isvedimoPabaiga = high_resolution_clock::now();
 
@@ -256,7 +253,6 @@ int main() {
 
             out1.close();
             out2.close();
-            isvalymas(vargsiukai);
             isvalymas(kietiakai);
             isvalymas(studentai);
         }
