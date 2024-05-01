@@ -158,14 +158,13 @@ int main() {
             cout << "--------------------------------------------------------" << endl;
 
             //KONTEINERIU KURIMAS
-            vector<mok> vargsiukai;
             vector<mok> kietiakai;
 
             char kl = rikiavimoklausimas();
 
             auto rusiavimoPradzia = high_resolution_clock::now();
 
-            konteineriai(studentuKiekis, studentai, kl, vargsiukai, kietiakai);
+            konteineriai(studentuKiekis, studentai, kl, kietiakai);
 
             auto rusiavimoPabaiga = high_resolution_clock::now();
 
@@ -179,7 +178,7 @@ int main() {
             auto isvedimoPradzia = high_resolution_clock::now();
 
             cout << "VARGSIUKAI:" << endl;
-            isvedimas(vargsiukai, cout, kl);
+            isvedimas(studentai, cout, kl);
 
             cout << "KIETIAKAI: " << endl;
             isvedimas(kietiakai, cout, kl);
@@ -222,13 +221,12 @@ int main() {
             //RIKIAVIMAS BAIGTAS
 
             //KONTEINERIU KURIMAS
-            vector<mok> vargsiukai;
             vector<mok> kietiakai;
 
             char kl = rikiavimoklausimas();
 
             auto rusiavimoPradzia = high_resolution_clock::now();
-            konteineriai(studentuKiekis, studentai, kl, vargsiukai, kietiakai);
+            konteineriai(studentuKiekis, studentai, kl, kietiakai);
             auto rusiavimoPabaiga = high_resolution_clock::now();
 
             cout << "--------------------------------------------------------" << endl;
@@ -237,7 +235,7 @@ int main() {
 
             //ISVEDIMAS
             auto isvedimoPradzia = high_resolution_clock::now();
-            isvedimas(vargsiukai, out1, kl);
+            isvedimas(studentai, out1, kl);
             isvedimas(kietiakai, out2, kl);
             auto isvedimoPabaiga = high_resolution_clock::now();
 
@@ -256,7 +254,6 @@ int main() {
 
             out1.close();
             out2.close();
-            isvalymas(vargsiukai);
             isvalymas(kietiakai);
             isvalymas(studentai);
         }
