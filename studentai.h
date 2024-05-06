@@ -64,11 +64,6 @@ public:
     vector<int> getnd() const{
         return nd;
     }
-    mok() = default;
-
-    ~mok() {
-        nd.clear();
-    }
     void isvalymas() {
         nd.clear();
         var.clear();
@@ -77,6 +72,69 @@ public:
         gal_vid = 0;
         gal_med = 0;
     }
+    // RULE OF FIVE:
+
+    mok() = default;
+
+    // Destructor
+    ~mok() {
+        nd.clear();
+    }
+
+    // Copy Constructor
+    mok(const mok& laikStud) {
+        var = laikStud.var;
+        pav = laikStud.pav;
+        eg = laikStud.eg;
+        gal_vid = laikStud.gal_vid;
+        gal_med = laikStud.gal_med;
+        nd = laikStud.nd;
+    }
+
+    // Copy Assignment Operator
+    mok& operator=(const mok& laikStud) {
+        if (this != &laikStud) {
+            var = laikStud.var;
+            pav = laikStud.pav;
+            eg = laikStud.eg;
+            gal_vid = laikStud.gal_vid;
+            gal_med = laikStud.gal_med;
+            nd = laikStud.nd;
+        }
+        return *this;
+    }
+
+    // Move Constructor
+    mok(mok&& laikStud) noexcept {
+        var = move(laikStud.var);
+        pav = move(laikStud.pav);
+        eg = laikStud.eg;
+        gal_vid = laikStud.gal_vid;
+        gal_med = laikStud.gal_med;
+        nd = move(laikStud.nd);
+        // Reset the moved object
+        laikStud.eg = 0;
+        laikStud.gal_vid = 0.0;
+        laikStud.gal_med = 0.0;
+    }
+
+    // Move Assignment Operator
+    mok& operator=(mok&& laikStud) noexcept {
+        if (this != &laikStud) {
+            var = move(laikStud.var);
+            pav = move(laikStud.pav);
+            eg = laikStud.eg;
+            gal_vid = laikStud.gal_vid;
+            gal_med = laikStud.gal_med;
+            nd = move(laikStud.nd);
+            // Reset the moved object
+            laikStud.eg = 0;
+            laikStud.gal_vid = 0.0;
+            laikStud.gal_med = 0.0;
+        }
+        return *this;
+    }
+
 };
 
 void ivedimas(vector<mok>& stud);
