@@ -17,12 +17,11 @@ using namespace std::chrono;
 
 class mok {
 private:
-    vector<int> nd;
-    string var, pav;
-    int eg;
-    double gal_vid, gal_med;
+    vector<int> nd = {0};
+    string var = " ", pav = " ";
+    int eg = 0;
+    double gal_vid = 0.0 , gal_med = 0.0;
 public:
-
     void setvar(string& vardas) {
         var = vardas;
     }
@@ -62,10 +61,14 @@ public:
     void setnd(const vector<int>& ND) {
         nd = ND;
     }
-    vector<int> getnd() const {
+    vector<int> getnd() const{
         return nd;
     }
+    mok() = default;
 
+    ~mok() {
+        nd.clear();
+    }
     void isvalymas() {
         nd.clear();
         var.clear();
