@@ -250,8 +250,7 @@ int main() {
             cout << "--------------------------------------------------------" << endl;
             cout << "duomenys isvesti" << endl;
             cout << "--------------------------------------------------------" << endl;
-            cout << "Darbas su " << studentuKiekis << " studentu failu" << endl;
-            cout << "Darbas su klasmis, Optimizavimas 03" << endl;
+            cout << "Darbas su " << studentuKiekis << "studentu failu" << endl;
             // cout << "Failo su " << studentuKiekis << " studentu generavimas truko: " << trukmesSkaiciavimas(failoGeneravimoPradzia, failoGeneravimoPabaiga).count() << " ms" << endl;
             cout << "Nuskaitymas truko: " << trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() << " ms" << endl;
             cout << "Skaiciavimas truko: " << trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() << " ms" << endl;
@@ -263,8 +262,8 @@ int main() {
 
             out1.close();
             out2.close();
-            isvalymas(vargsiukai);
-            isvalymas(studentai);
+            //isvalymas(vargsiukai);
+            //isvalymas(studentai);
         }
     }
 
