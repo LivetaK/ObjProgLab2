@@ -82,6 +82,7 @@ ANTRA TESTAVIMO DALIS
 3 STRATEGIJA
 
 
+![image](https://github.com/LivetaK/ObjProgLab2/assets/159531709/cb0bd288-d050-4310-8cfb-afb80b59731f)
 
 
 
