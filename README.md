@@ -67,8 +67,40 @@ mok& mok::operator=(mok&& laikStud) noexcept {
 }
 ```
 
+Įvesties ir išvesties persidengimo metodai:
 
+Jei rašome pvz.: cout << studentas; -  bus išvedami visi objekto "studentas" kintamieji
 
+```cpp
+ostream& operator<<(ostream& output, const mok& stud) {
+    output << stud.getvar() << " " << stud.getpav() << " " << stud.geteg() << " ";
+    vector<int> pazymiai = stud.getnd();
+    for (int pazymys : pazymiai) {
+        output << pazymys << " ";
+    }
+    return output;
+}
+```
+
+Jei rašome pvz.: cin >> studentas; - vartotojas turės švesti visus kintamuosius, kurie turi būti objekte "studentas"
+
+```cpp
+istream& operator>>(istream& input, mok& stud) {
+    string vardas, pavarde;
+    int pazymys, egzaminas;
+    vector<int> namuD;
+    input >> vardas >> pavarde >> egzaminas;
+    stud.setvar(vardas);
+    stud.setpav(pavarde);
+    stud.seteg(egzaminas);
+    stud.getnd().clear(); 
+    while (input >> pazymys) {
+        namuD.push_back(pazymys);
+    }
+    stud.setnd(namuD);
+    return input;
+}
+```
 
 **V1.1 TESTAVIMAS**
 
