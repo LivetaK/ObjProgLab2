@@ -4,14 +4,13 @@ Rule of five:
 
 1. Destructor (Destruktorius) - išvalo atmintį, kad nebūtų duomenų nutekėjimo
 
-'''cpp
+```cpp
 mok::~mok() {
     nd.clear();
 }
-'''
-
+```
 2. Copy Constructor (Kopijabvimo konstruktorius) - leidžia saugiai kopijuoti visą objektą
-
+```cpp
 mok::mok(const mok& laikStud) {
     var = laikStud.var;
     pav = laikStud.pav;
@@ -20,9 +19,9 @@ mok::mok(const mok& laikStud) {
     gal_med = laikStud.gal_med;
     nd = laikStud.nd;
 }
-
+```
 3. Copy Assignment Operator (Kopijavimo priskyrimo operatorius) - leidžia jau sukurtam objektui priskirti reikšmes iš kito objekto
-
+```cpp
 mok& mok::operator=(const mok& laikStud) {
     if (this != &laikStud) {
         var = laikStud.var;
@@ -34,9 +33,9 @@ mok& mok::operator=(const mok& laikStud) {
     }
     return *this;
 }
-
+```
 4. Move Constructor (Perkėlimo konstruktorius) - leidžia perkelti duomenis iš vieno objekto į kitą
-
+```cpp
 mok::mok(mok&& laikStud) noexcept
 :   var(move(laikStud.var)),
     pav(move(laikStud.pav)),
@@ -49,9 +48,9 @@ mok::mok(mok&& laikStud) noexcept
     laikStud.gal_vid = 0.0;
     laikStud.gal_med = 0.0;
 }
-
+```
 5. Move Assignment Operator (Perkįlimo priskyrimo operatorius) - panašus į perkėlimo konstruktorių, bet naudojamas kai duomenys turi būti perkelti į jau egzistuojantį objektą
-
+```cpp
 mok& mok::operator=(mok&& laikStud) noexcept {
     if (this != &laikStud) {
         var = move(laikStud.var);
@@ -60,14 +59,13 @@ mok& mok::operator=(mok&& laikStud) noexcept {
         gal_vid = laikStud.gal_vid;
         gal_med = laikStud.gal_med;
         nd = move(laikStud.nd);
-
         laikStud.eg = 0;
         laikStud.gal_vid = 0.0;
         laikStud.gal_med = 0.0;
     }
     return *this;
 }
-
+```
 
 
 
