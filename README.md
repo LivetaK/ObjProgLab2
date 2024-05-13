@@ -4,9 +4,9 @@ Rule of five:
 
 1. Destructor (Destruktorius) - išvalo atmintį, kad nebūtų duomenų nutekėjimo
 
-'mok::~mok() {
+'''mok::~mok() {
     nd.clear();
-}'
+}'''
 
 2. Copy Constructor (Kopijabvimo konstruktorius) - leidžia saugiai kopijuoti visą objektą
 3. Copy Assignment Operator (Kopijavimo priskyrimo operatorius) - leidžia jau sukurtam objektui priskirti reikšmes iš kito objekto
