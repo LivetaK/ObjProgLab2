@@ -135,7 +135,7 @@ int main() {
         
         // NAUDOTOJAS ĮVEDA FAILO PAVADINIMA
         
-        cout << "Kiek studentu reikės apdoroti programai?" << endl;
+        cout << "Kiek studentu reikes apdoroti programai?" << endl;
         int studentuKiekis;
         while (!(cin >> studentuKiekis) || studentuKiekis < 1) {
             cout << "Neteisinga ivestis. Bandykite dar karta" << endl;
