@@ -1,5 +1,138 @@
 #include "studentai.h"
 
+// klase
+void mok::setvar(const string& vardas) {
+    var = vardas;
+}
+string mok::getvar() const {
+    return var;
+}
+void mok::setpav(const string& pavarde) {
+    pav = pavarde;
+}
+string mok::getpav() const {
+    return pav;
+}
+void mok::seteg(int egzaminas) {
+    eg = egzaminas;
+}
+int mok::geteg()const {
+    return eg;
+}
+void mok::setgal_vid(double Gal_vid) {
+    gal_vid = Gal_vid;
+}
+double mok::getgal_vid() const {
+    return gal_vid;
+}
+void mok::setgal_med(double Gal_med) {
+    gal_med = Gal_med;
+}
+double mok::getgal_med() const {
+    return gal_med;
+}
+void mok::setnd(const vector<int>& ND) {
+    nd = ND;
+}
+vector<int> mok::getnd() const {
+    return nd;
+}
+void mok::isvalymas() {
+    nd.clear();
+    var.clear();
+    pav.clear();
+    eg = 0;
+    gal_vid = 0;
+    gal_med = 0;
+}
+// RULE OF FIVE:
+
+// Destructor
+mok::~mok() {
+    nd.clear();
+}
+
+// Copy Constructor
+mok::mok(const mok& laikStud) {
+    var = laikStud.var;
+    pav = laikStud.pav;
+    eg = laikStud.eg;
+    gal_vid = laikStud.gal_vid;
+    gal_med = laikStud.gal_med;
+    nd = laikStud.nd;
+}
+
+// Copy Assignment Operator
+mok& mok::operator=(const mok& laikStud) {
+    if (this != &laikStud) {
+        var = laikStud.var;
+        pav = laikStud.pav;
+        eg = laikStud.eg;
+        gal_vid = laikStud.gal_vid;
+        gal_med = laikStud.gal_med;
+        nd = laikStud.nd;
+    }
+    return *this;
+}
+
+// Move Constructor
+mok::mok(mok&& laikStud) noexcept
+:   var(move(laikStud.var)),
+    pav(move(laikStud.pav)),
+    eg(laikStud.eg),           
+    gal_vid(laikStud.gal_vid),
+    gal_med(laikStud.gal_med),
+    nd(move(laikStud.nd))
+{
+    laikStud.eg = 0;
+    laikStud.gal_vid = 0.0;
+    laikStud.gal_med = 0.0;
+}
+
+
+// Move Assignment Operator
+mok& mok::operator=(mok&& laikStud) noexcept {
+    if (this != &laikStud) {
+        var = move(laikStud.var);
+        pav = move(laikStud.pav);
+        eg = laikStud.eg;
+        gal_vid = laikStud.gal_vid;
+        gal_med = laikStud.gal_med;
+        nd = move(laikStud.nd);
+
+        laikStud.eg = 0;
+        laikStud.gal_vid = 0.0;
+        laikStud.gal_med = 0.0;
+    }
+    return *this;
+}
+
+ostream& operator<<(ostream& output, const mok& stud) {
+    output << stud.getvar() << " " << stud.getpav() << " " << stud.geteg() << " ";
+    vector<int> pazymiai = stud.getnd();
+    for (int pazymys : pazymiai) {
+        output << pazymys << " ";
+    }
+    return output;
+}
+
+istream& operator>>(istream& input, mok& stud) {
+    string vardas, pavarde;
+    int pazymys, egzaminas;
+    vector<int> namuD;
+    input >> vardas >> pavarde >> egzaminas;
+    stud.setvar(vardas);
+    stud.setpav(pavarde);
+    stud.seteg(egzaminas);
+    stud.getnd().clear(); 
+    while (input >> pazymys) {
+        namuD.push_back(pazymys);
+    }
+    stud.setnd(namuD);
+    return input;
+}
+//klases pabaiga
+
 
 void ivedimas(vector<mok>& stud) {
     mok naujas_stud;
@@ -198,7 +331,9 @@ void failuNuskaitymas(vector<mok>& studentai, string& failoPavadinimas) {
     do {
         file.open(failoPavadinimas);
         if (!file) {
-            cout << "Nepavyko atidaryti failo." << endl;
+            cout << "Nepavyko atidaryti failo. Galut suklydote, vesdami pavadinima?! Bandykite dar karta" << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
             cin >> failoPavadinimas;
         }
     } while (!file.is_open());
@@ -236,9 +371,9 @@ void failuNuskaitymas(vector<mok>& studentai, string& failoPavadinimas) {
     file.close();
 }
 int pirmasP(int& pirmasPasirinkimas) {
-    cout << "Jei norite duomenis ivesti ranka, iveskite 1, jei norite, kad duomenys butu nuskaityti is failo, iveskite 2" << endl;
+    cout << "Jei norite duomenis ivesti ranka, iveskite 1, jei norite, kad duomenys butu nuskaityti is failo, iveskite 2, jei norite testuoti, iveskite 3" << endl;
     cin >> pirmasPasirinkimas;
-    while (!(pirmasPasirinkimas == 1 || pirmasPasirinkimas == 2)) {
+    while (!(pirmasPasirinkimas == 1 || pirmasPasirinkimas == 2 || pirmasPasirinkimas == 3)) {
         cout << "Neteisingas pasirinkimas. Bandykite dar karta." << endl;
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -282,4 +417,7 @@ void rikiavimas(int ketvirtasPasirinkimas, vector<mok>& studentai) {
         break;
     }
     }
+}
+void testavimoRezultatai(bool result, const string& testas) {
+    cout << testas << ": " << (result ? "PASS" : "FAIL") << endl;
 }
