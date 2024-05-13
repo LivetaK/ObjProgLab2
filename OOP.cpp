@@ -128,16 +128,23 @@ int main() {
 
         // FAILAS JAU EGZISTUOJA (TYRIMUI)
 
-        int studentuKiekis = 1000000;
-        string failoPavadinimas = "studentai" + to_string(studentuKiekis) + ".txt";
+       // FAILAS JAU EGZISTUOJA (TYRIMUI)
 
-        //NUSKAITYMAS IS FAILO
-        auto nuskaitymoPradzia = high_resolution_clock::now();
-        failuNuskaitymas(studentai, failoPavadinimas);
-        auto nuskaitymoPabaiga = high_resolution_clock::now();
-        cout << "--------------------------------------------------------" << endl;
-        cout << "failas nuskaitytas" << endl;
-        cout << "--------------------------------------------------------" << endl;
+        /*int studentuKiekis = 1000000;
+        string failoPavadinimas = "studentai" + to_string(studentuKiekis) + ".txt";*/
+        
+        // NAUDOTOJAS ĮVEDA FAILO PAVADINIMA
+        
+        cout << "Kiek studentu reikės apdoroti programai?" << endl;
+        int studentuKiekis;
+        while (!(cin >> studentuKiekis) || studentuKiekis < 1) {
+            cout << "Neteisinga ivestis. Bandykite dar karta" << endl;
+        };
+        cout << "Iveskite failo pavadinima" << endl;
+        int failoPav;
+        cin >> failoPav;
+        string failoPavadinimas = failoPav + ".txt";
+        
         //NUSKAITYMAS IS FAILO BAIGTAS
 
         //SKAICIUOJAMI REZULTATAI
