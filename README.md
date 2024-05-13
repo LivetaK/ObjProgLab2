@@ -1,25 +1,78 @@
-V1.2 RULE OF FIVE
+**V1.2 RULE OF FIVE**
 
 Rule of five:
 
 1. Destructor (Destruktorius) - išvalo atmintį, kad nebūtų duomenų nutekėjimo
 
-'''mok::~mok() {
+'''cpp
+mok::~mok() {
     nd.clear();
-}'''
+}
+'''
 
 2. Copy Constructor (Kopijabvimo konstruktorius) - leidžia saugiai kopijuoti visą objektą
+
+mok::mok(const mok& laikStud) {
+    var = laikStud.var;
+    pav = laikStud.pav;
+    eg = laikStud.eg;
+    gal_vid = laikStud.gal_vid;
+    gal_med = laikStud.gal_med;
+    nd = laikStud.nd;
+}
+
 3. Copy Assignment Operator (Kopijavimo priskyrimo operatorius) - leidžia jau sukurtam objektui priskirti reikšmes iš kito objekto
+
+mok& mok::operator=(const mok& laikStud) {
+    if (this != &laikStud) {
+        var = laikStud.var;
+        pav = laikStud.pav;
+        eg = laikStud.eg;
+        gal_vid = laikStud.gal_vid;
+        gal_med = laikStud.gal_med;
+        nd = laikStud.nd;
+    }
+    return *this;
+}
+
 4. Move Constructor (Perkėlimo konstruktorius) - leidžia perkelti duomenis iš vieno objekto į kitą
+
+mok::mok(mok&& laikStud) noexcept
+:   var(move(laikStud.var)),
+    pav(move(laikStud.pav)),
+    eg(laikStud.eg),           
+    gal_vid(laikStud.gal_vid),
+    gal_med(laikStud.gal_med),
+    nd(move(laikStud.nd))
+{
+    laikStud.eg = 0;
+    laikStud.gal_vid = 0.0;
+    laikStud.gal_med = 0.0;
+}
+
 5. Move Assignment Operator (Perkįlimo priskyrimo operatorius) - panašus į perkėlimo konstruktorių, bet naudojamas kai duomenys turi būti perkelti į jau egzistuojantį objektą
 
+mok& mok::operator=(mok&& laikStud) noexcept {
+    if (this != &laikStud) {
+        var = move(laikStud.var);
+        pav = move(laikStud.pav);
+        eg = laikStud.eg;
+        gal_vid = laikStud.gal_vid;
+        gal_med = laikStud.gal_med;
+        nd = move(laikStud.nd);
+
+        laikStud.eg = 0;
+        laikStud.gal_vid = 0.0;
+        laikStud.gal_med = 0.0;
+    }
+    return *this;
+}
 
 
 
 
 
-
-V1.1 TESTAVIMAS
+**V1.1 TESTAVIMAS**
 
 
 CLASS VS STRUCT
@@ -70,7 +123,7 @@ KAIP VEIKIA PROGRAMA
 
 
 
-V1.0 TESTAVIMAS
+**V1.0 TESTAVIMAS**
 
 ---------------------------------------------------------
 Testavimo sistemos parametrai:
