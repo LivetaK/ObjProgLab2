@@ -25,7 +25,11 @@ Kaip matome, programa su struktūra veikia greičiau.
 
 
 OPTIMIZAVIMAS
+
+
+
 ![image](https://github.com/LivetaK/ObjProgLab2/assets/159531709/f09bb864-4a87-4638-a08e-c41322ce1def)
+
 ![image](https://github.com/LivetaK/ObjProgLab2/assets/159531709/b1a48bc4-1482-430a-9031-01a3f9f471d8)
 
 
