@@ -1,3 +1,24 @@
+V1.2 RULE OF FIVE
+
+Rule of five:
+
+1. Destructor (Destruktorius) - išvalo atmintį, kad nebūtų duomenų nutekėjimo
+
+'mok::~mok() {
+    nd.clear();
+}'
+
+2. Copy Constructor (Kopijabvimo konstruktorius) - leidžia saugiai kopijuoti visą objektą
+3. Copy Assignment Operator (Kopijavimo priskyrimo operatorius) - leidžia jau sukurtam objektui priskirti reikšmes iš kito objekto
+4. Move Constructor (Perkėlimo konstruktorius) - leidžia perkelti duomenis iš vieno objekto į kitą
+5. Move Assignment Operator (Perkįlimo priskyrimo operatorius) - panašus į perkėlimo konstruktorių, bet naudojamas kai duomenys turi būti perkelti į jau egzistuojantį objektą
+
+
+
+
+
+
+
 V1.1 TESTAVIMAS
 
 
