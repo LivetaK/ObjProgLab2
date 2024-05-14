@@ -45,6 +45,40 @@ void mok::isvalymas() {
     gal_vid = 0;
     gal_med = 0;
 }
+
+//RULE OF FIVE ZMOGUS
+
+//copy con
+zmogus::zmogus(const zmogus& laikStud)
+    : var(laikStud.var),
+    pav(laikStud.pav) {};
+
+
+//copy assignment op
+zmogus& zmogus::operator=(const zmogus& laikStud) {
+    if (this != &laikStud) {
+        var = laikStud.var;
+        pav = laikStud.pav;
+    }
+    return *this;
+}
+//move con
+
+
+zmogus::zmogus(zmogus&& laikStud) noexcept
+    : var(move(laikStud.var)),
+    pav(move(laikStud.pav)) {};
+
+
+//move assignment op
+zmogus& zmogus::operator=(zmogus&& laikStud) noexcept {
+    if (this != &laikStud) {
+        var = move(laikStud.var);
+        pav = move(laikStud.pav);
+    }
+    return *this;
+}
+
 // RULE OF FIVE:
 
 // Destructor
@@ -53,7 +87,9 @@ mok::~mok() {
 }
 
 // Copy Constructor
-mok::mok(const mok& laikStud) {
+mok::mok(const mok& laikStud)
+    : zmogus(laikStud)
+{
     var = laikStud.var;
     pav = laikStud.pav;
     eg = laikStud.eg;
@@ -65,8 +101,7 @@ mok::mok(const mok& laikStud) {
 // Copy Assignment Operator
 mok& mok::operator=(const mok& laikStud) {
     if (this != &laikStud) {
-        var = laikStud.var;
-        pav = laikStud.pav;
+        zmogus::operator=(laikStud);
         eg = laikStud.eg;
         gal_vid = laikStud.gal_vid;
         gal_med = laikStud.gal_med;
@@ -77,8 +112,7 @@ mok& mok::operator=(const mok& laikStud) {
 
 // Move Constructor
 mok::mok(mok&& laikStud) noexcept
-:   var(move(laikStud.var)),
-    pav(move(laikStud.pav)),
+:   zmogus(move(laikStud)),
     eg(laikStud.eg),           
     gal_vid(laikStud.gal_vid),
     gal_med(laikStud.gal_med),
@@ -93,8 +127,7 @@ mok::mok(mok&& laikStud) noexcept
 // Move Assignment Operator
 mok& mok::operator=(mok&& laikStud) noexcept {
     if (this != &laikStud) {
-        var = move(laikStud.var);
-        pav = move(laikStud.pav);
+        zmogus::operator=(move(laikStud));
         eg = laikStud.eg;
         gal_vid = laikStud.gal_vid;
         gal_med = laikStud.gal_med;
