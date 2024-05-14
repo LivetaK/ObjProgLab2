@@ -1,4 +1,4 @@
-#include "studentai.h"
+#include "funkcijos.h"
 
 // klase
 void mok::setvar(const string& vardas) {

@@ -12,7 +12,7 @@ endif()
 project ("OOP")
 
 # Add source to this project's executable.
-add_executable (OOP "OOP.cpp" "studentai.h" "studentai.cpp")
+add_executable (OOP "OOP.cpp" "funkcijos.h" "funkcijos.cpp" "studentas.h" "studentas.cpp")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET OOP PROPERTY CXX_STANDARD 20)
