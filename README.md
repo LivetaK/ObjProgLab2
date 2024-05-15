@@ -1,3 +1,32 @@
+**V1.5**
+Pridėta bazinė klasė "zmogus":
+```cpp
+class zmogus {
+protected:
+    string var = " ", pav = " ";
+public:
+    virtual void setvar(const string& vardas) = 0;
+    virtual string getvar() const = 0;
+    virtual void setpav(const string& pavarde) = 0;
+    virtual string getpav() const = 0;
+
+    zmogus() = default;
+    virtual ~zmogus() {};
+
+    zmogus(const zmogus& laikStud);  // Copy constructor
+    zmogus(zmogus&& laikStud) noexcept;  // Move constructor
+    zmogus& operator=(const zmogus& laikStud);  // Copy assignment operator
+    zmogus& operator=(zmogus&& laikStud) noexcept;  // Move assignment operator
+};
+```
+kaedangi klasė yra abstrakti, naujas objektas tipo "zmogus", nėra leistinas:
+
+
+![image](https://github.com/LivetaK/ObjProgLab2/assets/159531709/944fbe49-1fad-4fdc-a9e0-e218090f0647)
+
+
+Šiai versijai taip pat pritaikyta penkių metodų taisyklė, funkcijos su zmogaus tipo kintamaisiais perkeltos į klasę "žmogus".
+
 **V1.2 RULE OF FIVE**
 
 Rule of five:
