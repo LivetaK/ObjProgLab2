@@ -25,7 +25,7 @@ kaedangi klasė yra abstrakti, naujas objektas tipo "zmogus", nėra leistinas:
 ![image](https://github.com/LivetaK/ObjProgLab2/assets/159531709/944fbe49-1fad-4fdc-a9e0-e218090f0647)
 
 
-Šiai versijai taip pat pritaikyta penkių metodų taisyklė, funkcijos su zmogaus tipo kintamaisiais perkeltos į klasę "žmogus".
+Šiai versijai taip pat pritaikyta penkių metodų taisyklė, funkcijos su zmogaus tipo kintamaisiais perkeltos į klasę "zmogus".
 
 **V1.2 RULE OF FIVE**
 
