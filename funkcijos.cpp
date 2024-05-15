@@ -1,8 +1,6 @@
 #include "studentas.h"
 #include "funkcijos.h"
 
-
-
 void ivedimas(vector<mok>& stud) {
     mok naujas_stud;
     cout << "Iveskite studento varda ir pavarde:" << endl;

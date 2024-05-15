@@ -1,7 +1,6 @@
 #include "studentas.h"
 #include "funkcijos.h"
 
-
 void mok::setvar(const string& vardas) {
     var = vardas;
 }
