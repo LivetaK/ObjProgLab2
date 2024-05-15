@@ -1,4 +1,6 @@
+#include "studentas.h"
 #include "funkcijos.h"
+
 
 int main() {
     int pirmasPasirinkimas, antrasPasirinkimas, treciasPasirinkimas, ketvirtasPasirinkimas, n;
