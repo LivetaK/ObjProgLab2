@@ -93,6 +93,7 @@ int main() {
                     }
                     naujasStud.seteg(rand() % 10 + 1);
                     studentai.push_back(naujasStud);
+                    pazymiai.clear();
                 }
                 calculateResults(studentai);
                 isvedimas(studentai, cout, rikiavimoklausimas());
@@ -110,8 +111,7 @@ int main() {
         //TRINAMI VEKTORIAI
         isvalymas(studentai);
     }
-    else {
-        if (pirmasPasirinkimas == 2) { //NORIMA DUOMENIS SKAITYTI IS FAILO
+    else if (pirmasPasirinkimas == 2) { //NORIMA DUOMENIS SKAITYTI IS FAILO
 
             // FAILU GENERAVIMAS
           /*  cout << "Kiek studentu norite, kad programa sugeneruotu?" << endl;
@@ -282,7 +282,7 @@ int main() {
                 //isvalymas(vargsiukai);
                 //isvalymas(studentai);
             }
-        } else{ //TESTAVIMAS
+    } else{ //TESTAVIMAS
             mok originalus;
             originalus.setvar("vardziukas");
             originalus.setpav("pavardziukas");
@@ -351,7 +351,5 @@ int main() {
             assert(studentas.getnd() == vector<int>({2, 3}));
             testavimoRezultatai(true, "ivesties operatorius");
 
-        }
     }
-
 }
