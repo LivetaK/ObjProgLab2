@@ -1,0 +1,224 @@
+\chapter{README}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{README@{README}}
+{\bfseries{V1.\+5}} Pridėta bazinė klasė "{}zmogus"{}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class\ }\mbox{\hyperlink{classzmogus}{zmogus}}\ \{}
+\DoxyCodeLine{\textcolor{keyword}{protected}:}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classzmogus_a5feb8368e51a56118d057d6f7a1476b2}{var}}\ =\ \textcolor{stringliteral}{"{}\ "{}},\ \mbox{\hyperlink{classzmogus_a63777d057453ce32b9ab0cea5b282c0c}{pav}}\ =\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classzmogus_a27327cd42fd4a04a4eca055d9cad739d}{setvar}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ vardas)\ =\ 0;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classzmogus_aaf0840f345539adc6d3f01f97dfa4237}{getvar}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classzmogus_a01a84d86b87666c60af7dd23cb78da37}{setpav}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ pavarde)\ =\ 0;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classzmogus_afe54f1a852f3546c602421c1daa9f6ab}{getpav}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classzmogus_a903c961f64b1adcc7bab25cba2814811}{zmogus}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classzmogus_a67d08c33049ff379f5c8b72745416239}{\string~zmogus}}()\ \{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classzmogus_a903c961f64b1adcc7bab25cba2814811}{zmogus}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classzmogus}{zmogus}}\&\ laikStud);\ \ \textcolor{comment}{//\ Copy\ constructor}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classzmogus_a903c961f64b1adcc7bab25cba2814811}{zmogus}}(\mbox{\hyperlink{classzmogus}{zmogus}}\&\&\ laikStud)\ \textcolor{keyword}{noexcept};\ \ \textcolor{comment}{//\ Move\ constructor}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classzmogus}{zmogus}}\&\ \mbox{\hyperlink{classzmogus_a77b9ce580493ab281e408593bc76f301}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classzmogus}{zmogus}}\&\ laikStud);\ \ \textcolor{comment}{//\ Copy\ assignment\ operator}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classzmogus}{zmogus}}\&\ \mbox{\hyperlink{classzmogus_a77b9ce580493ab281e408593bc76f301}{operator=}}(\mbox{\hyperlink{classzmogus}{zmogus}}\&\&\ laikStud)\ \textcolor{keyword}{noexcept};\ \ \textcolor{comment}{//\ Move\ assignment\ operator}}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+ kaedangi klasė yra abstrakti, naujas objektas tipo "{}zmogus"{}, nėra leistinas\+:
+
+
+
+Šiai versijai taip pat pritaikyta penkių metodų taisyklė, funkcijos su zmogaus tipo kintamaisiais perkeltos į klasę "{}zmogus"{}.
+
+{\bfseries{V1.\+2 RULE OF FIVE}}
+
+Rule of five\+:
+
+
+\begin{DoxyEnumerate}
+\item Destructor (Destruktorius) -\/ išvalo atmintį, kad nebūtų duomenų nutekėjimo
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classmok_ade420b2ef6511ec4448134077c316e15}{mok::\string~mok}}()\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classmok_ac214ad86a90b9c7f8dc881b18c82faa2}{nd}}.clear();}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+\begin{DoxyEnumerate}
+\item Copy Constructor (Kopijabvimo konstruktorius) -\/ leidžia saugiai kopijuoti visą objektą 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classmok_ab7f7cd11ef70a15c243b99e66264ec48}{mok::mok}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classmok}{mok}}\&\ laikStud)\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classzmogus_a5feb8368e51a56118d057d6f7a1476b2}{var}}\ =\ laikStud.\mbox{\hyperlink{classzmogus_a5feb8368e51a56118d057d6f7a1476b2}{var}};}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classzmogus_a63777d057453ce32b9ab0cea5b282c0c}{pav}}\ =\ laikStud.\mbox{\hyperlink{classzmogus_a63777d057453ce32b9ab0cea5b282c0c}{pav}};}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classmok_a4477e4eac40afbe922ce042162262200}{eg}}\ =\ laikStud.\mbox{\hyperlink{classmok_a4477e4eac40afbe922ce042162262200}{eg}};}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classmok_a1f4fbb8325de2cb0563396c0bb80bd8a}{gal\_vid}}\ =\ laikStud.\mbox{\hyperlink{classmok_a1f4fbb8325de2cb0563396c0bb80bd8a}{gal\_vid}};}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classmok_af64b233acba155ee91162f35df16410a}{gal\_med}}\ =\ laikStud.\mbox{\hyperlink{classmok_af64b233acba155ee91162f35df16410a}{gal\_med}};}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classmok_ac214ad86a90b9c7f8dc881b18c82faa2}{nd}}\ =\ laikStud.\mbox{\hyperlink{classmok_ac214ad86a90b9c7f8dc881b18c82faa2}{nd}};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+\item Copy Assignment Operator (Kopijavimo priskyrimo operatorius) -\/ leidžia jau sukurtam objektui priskirti reikšmes iš kito objekto 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classmok}{mok}}\&\ \mbox{\hyperlink{classmok_a86547ebedd054e6d5a56d783b6fd1428}{mok::operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classmok}{mok}}\&\ laikStud)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&laikStud)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{classzmogus_a5feb8368e51a56118d057d6f7a1476b2}{var}}\ =\ laikStud.\mbox{\hyperlink{classzmogus_a5feb8368e51a56118d057d6f7a1476b2}{var}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{classzmogus_a63777d057453ce32b9ab0cea5b282c0c}{pav}}\ =\ laikStud.\mbox{\hyperlink{classzmogus_a63777d057453ce32b9ab0cea5b282c0c}{pav}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{classmok_a4477e4eac40afbe922ce042162262200}{eg}}\ =\ laikStud.\mbox{\hyperlink{classmok_a4477e4eac40afbe922ce042162262200}{eg}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{classmok_a1f4fbb8325de2cb0563396c0bb80bd8a}{gal\_vid}}\ =\ laikStud.\mbox{\hyperlink{classmok_a1f4fbb8325de2cb0563396c0bb80bd8a}{gal\_vid}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{classmok_af64b233acba155ee91162f35df16410a}{gal\_med}}\ =\ laikStud.\mbox{\hyperlink{classmok_af64b233acba155ee91162f35df16410a}{gal\_med}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{classmok_ac214ad86a90b9c7f8dc881b18c82faa2}{nd}}\ =\ laikStud.\mbox{\hyperlink{classmok_ac214ad86a90b9c7f8dc881b18c82faa2}{nd}};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+\item Move Constructor (Perkėlimo konstruktorius) -\/ leidžia perkelti duomenis iš vieno objekto į kitą 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classmok_ab7f7cd11ef70a15c243b99e66264ec48}{mok::mok}}(\mbox{\hyperlink{classmok}{mok}}\&\&\ laikStud)\ noexcept}
+\DoxyCodeLine{:\ \ \ var(move(laikStud.\mbox{\hyperlink{classzmogus_a5feb8368e51a56118d057d6f7a1476b2}{var}})),}
+\DoxyCodeLine{\ \ \ \ pav(move(laikStud.\mbox{\hyperlink{classzmogus_a63777d057453ce32b9ab0cea5b282c0c}{pav}})),}
+\DoxyCodeLine{\ \ \ \ eg(laikStud.\mbox{\hyperlink{classmok_a4477e4eac40afbe922ce042162262200}{eg}}),\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ gal\_vid(laikStud.\mbox{\hyperlink{classmok_a1f4fbb8325de2cb0563396c0bb80bd8a}{gal\_vid}}),}
+\DoxyCodeLine{\ \ \ \ gal\_med(laikStud.\mbox{\hyperlink{classmok_af64b233acba155ee91162f35df16410a}{gal\_med}}),}
+\DoxyCodeLine{\ \ \ \ nd(move(laikStud.\mbox{\hyperlink{classmok_ac214ad86a90b9c7f8dc881b18c82faa2}{nd}}))}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ laikStud.\mbox{\hyperlink{classmok_a4477e4eac40afbe922ce042162262200}{eg}}\ =\ 0;}
+\DoxyCodeLine{\ \ \ \ laikStud.\mbox{\hyperlink{classmok_a1f4fbb8325de2cb0563396c0bb80bd8a}{gal\_vid}}\ =\ 0.0;}
+\DoxyCodeLine{\ \ \ \ laikStud.\mbox{\hyperlink{classmok_af64b233acba155ee91162f35df16410a}{gal\_med}}\ =\ 0.0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+\item Move Assignment Operator (Perkįlimo priskyrimo operatorius) -\/ panašus į perkėlimo konstruktorių, bet naudojamas kai duomenys turi būti perkelti į jau egzistuojantį objektą 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classmok}{mok}}\&\ \mbox{\hyperlink{classmok_a86547ebedd054e6d5a56d783b6fd1428}{mok::operator=}}(\mbox{\hyperlink{classmok}{mok}}\&\&\ laikStud)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&laikStud)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ =\ move(laikStud.\mbox{\hyperlink{classzmogus_a5feb8368e51a56118d057d6f7a1476b2}{var}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ pav\ =\ move(laikStud.\mbox{\hyperlink{classzmogus_a63777d057453ce32b9ab0cea5b282c0c}{pav}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ eg\ =\ laikStud.\mbox{\hyperlink{classmok_a4477e4eac40afbe922ce042162262200}{eg}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ gal\_vid\ =\ laikStud.\mbox{\hyperlink{classmok_a1f4fbb8325de2cb0563396c0bb80bd8a}{gal\_vid}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ gal\_med\ =\ laikStud.\mbox{\hyperlink{classmok_af64b233acba155ee91162f35df16410a}{gal\_med}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ nd\ =\ move(laikStud.\mbox{\hyperlink{classmok_ac214ad86a90b9c7f8dc881b18c82faa2}{nd}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ laikStud.\mbox{\hyperlink{classmok_a4477e4eac40afbe922ce042162262200}{eg}}\ =\ 0;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ laikStud.\mbox{\hyperlink{classmok_a1f4fbb8325de2cb0563396c0bb80bd8a}{gal\_vid}}\ =\ 0.0;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ laikStud.\mbox{\hyperlink{classmok_af64b233acba155ee91162f35df16410a}{gal\_med}}\ =\ 0.0;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+\end{DoxyEnumerate}
+
+Įvesties ir išvesties persidengimo metodai\+:
+
+Jei rašome pvz.\+: cout \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} studentas; -\/ bus išvedami visi objekto "{}studentas"{} kintamieji
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ostream\&\ \mbox{\hyperlink{studentas_8cpp_a16f898b47921d30b22fc0ffac1cdb76d}{operator<<}}(ostream\&\ output,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmok}{mok}}\&\ stud)\ \{}
+\DoxyCodeLine{\ \ \ \ output\ <<\ stud.\mbox{\hyperlink{classmok_a9bae04251d768fe28dc6f750388394c2}{getvar}}()\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ stud.\mbox{\hyperlink{classmok_a95de1c99979296658ff234449dd4d2e5}{getpav}}()\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ stud.\mbox{\hyperlink{classmok_acf38d3f2063d7a7b896795bc4cb9ef91}{geteg}}()\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{\ \ \ \ vector<int>\ pazymiai\ =\ stud.\mbox{\hyperlink{classmok_a48d142dfdea29e4ed9b76ce3c43998d3}{getnd}}();}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ pazymys\ :\ pazymiai)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ output\ <<\ pazymys\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ output;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Jei rašome pvz.\+: cin \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} studentas; -\/ vartotojas turės švesti visus kintamuosius, kurie turi būti objekte "{}studentas"{}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{istream\&\ \mbox{\hyperlink{studentas_8cpp_adcbfd3d440f99e1632e410f4cbb74950}{operator>>}}(istream\&\ input,\ \mbox{\hyperlink{classmok}{mok}}\&\ stud)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{string}\ vardas,\ pavarde;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ pazymys,\ egzaminas;}
+\DoxyCodeLine{\ \ \ \ vector<int>\ namuD;}
+\DoxyCodeLine{\ \ \ \ input\ >>\ vardas\ >>\ pavarde\ >>\ egzaminas;}
+\DoxyCodeLine{\ \ \ \ stud.\mbox{\hyperlink{classmok_a6fb6660eed53eed902bdbc4bc8227539}{setvar}}(vardas);}
+\DoxyCodeLine{\ \ \ \ stud.\mbox{\hyperlink{classmok_af155d499a81238322336cab78281a76e}{setpav}}(pavarde);}
+\DoxyCodeLine{\ \ \ \ stud.\mbox{\hyperlink{classmok_a7f50cdab264c7ca4246221e81d02a488}{seteg}}(egzaminas);}
+\DoxyCodeLine{\ \ \ \ stud.\mbox{\hyperlink{classmok_a48d142dfdea29e4ed9b76ce3c43998d3}{getnd}}().clear();\ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{while}\ (input\ >>\ pazymys)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ namuD.push\_back(pazymys);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ stud.\mbox{\hyperlink{classmok_a70ec80a18690c3f45a2278a764e7ed02}{setnd}}(namuD);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ input;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{V1.\+1 TESTAVIMAS}}
+
+CLASS VS STRUCT
+
+struct\+:
+
+ 
+
+class\+:
+
+ 
+
+Kaip matome, programa su struktūra veikia greičiau.
+
+OPTIMIZAVIMAS
+
+
+
+
+
+KAIP VEIKIA PROGRAMA
+
+Ši programa skaičiuoja studentų galutinį tam tikro kurso balą, naudodama studento pažymius ir egzaminų rezultatus. Programa realizuota su trimis skirtingais konteineriais\+: vector, deque, list; ir su trejomis skirtingomis strategijomis, todėl galima pasirinkti, kaip norima dirbti. Galima duomenis įvedinėti ranka, galima ir liepti programai juos skaityti iš failo. Štai taip veikia paleista programa\+:
+
+
+\begin{DoxyEnumerate}
+\item Paleidus programą išvedamas klausimas, kaip norima, kad būtų nuskaityti duomenys -\/ ar iš failo, ar įvesti ranka;
+\item Jei pasirenkame duomenis įrašyti ranka, išvedamas pasirinkimo meniu\+: ar įvedinėjame ranka, ar leidžiame programai sugeneruoti pažymius automatiškai, ar norime kad tiek studentų vardai, tiek jų pažymiai būtų generuojami auromatiškai;
+\item Jei pasirinkame, kad duomenys būtų skaitomi iš failo svarbu, kad failas būtų įkeltas į tą patį aplanką kartu su programa;
+\item Vedant vis naujus duomenis, programa paklaus jai rūpimų klausimų, kurie būtini galutinio balo skaičiavimui;
+\item Jei buvo pasirinkta duomenis skaityti iš failo, reiks pasirinkti, ir kur juos išvesti -\/ ar į ekraną, ar į naujai sugeneruotą failą.
+\end{DoxyEnumerate}
+
+{\bfseries{V1.\+0 TESTAVIMAS}}
+
+\DoxyHorRuler{0}
+ Testavimo sistemos parametrai\+: 
+
+\DoxyHorRuler{0}
+
+
+PIRMA TESTAVIMO DALIS
+
+\DoxyHorRuler{0}
+
+
+Rezultatu apibendrinimas ir palyginimas\+:
+
+
+
+\DoxyHorRuler{0}
+
+
+ANTRA TESTAVIMO DALIS
+
+\DoxyHorRuler{0}
+
+
+1 STRATEGIJA\+:
+
+
+
+2 STRATEGIJA
+
+
+
+3 STRATEGIJA
+
+ 

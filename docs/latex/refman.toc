@@ -1,0 +1,151 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}README}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Hierarchical Index}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Class Hierarchy}{5}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Class Index}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Class List}{7}{section.3.1}%
+\contentsline {chapter}{\numberline {4}File Index}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}File List}{9}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Class Documentation}{11}{chapter.5}%
+\contentsline {section}{\numberline {5.1}mok Class Reference}{11}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{12}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Constructor \& Destructor Documentation}{12}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}mok()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{12}{subsubsection.5.1.2.1}%
+\contentsline {subsubsection}{\numberline {5.1.2.2}$\sim $mok()}{13}{subsubsection.5.1.2.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.3}mok()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{13}{subsubsection.5.1.2.3}%
+\contentsline {subsubsection}{\numberline {5.1.2.4}mok()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{13}{subsubsection.5.1.2.4}%
+\contentsline {subsection}{\numberline {5.1.3}Member Function Documentation}{13}{subsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.3.1}geteg()}{13}{subsubsection.5.1.3.1}%
+\contentsline {subsubsection}{\numberline {5.1.3.2}getgal\_med()}{13}{subsubsection.5.1.3.2}%
+\contentsline {subsubsection}{\numberline {5.1.3.3}getgal\_vid()}{13}{subsubsection.5.1.3.3}%
+\contentsline {subsubsection}{\numberline {5.1.3.4}getnd()}{14}{subsubsection.5.1.3.4}%
+\contentsline {subsubsection}{\numberline {5.1.3.5}getpav()}{14}{subsubsection.5.1.3.5}%
+\contentsline {subsubsection}{\numberline {5.1.3.6}getvar()}{14}{subsubsection.5.1.3.6}%
+\contentsline {subsubsection}{\numberline {5.1.3.7}isvalymas()}{14}{subsubsection.5.1.3.7}%
+\contentsline {subsubsection}{\numberline {5.1.3.8}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{14}{subsubsection.5.1.3.8}%
+\contentsline {subsubsection}{\numberline {5.1.3.9}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{14}{subsubsection.5.1.3.9}%
+\contentsline {subsubsection}{\numberline {5.1.3.10}seteg()}{15}{subsubsection.5.1.3.10}%
+\contentsline {subsubsection}{\numberline {5.1.3.11}setgal\_med()}{15}{subsubsection.5.1.3.11}%
+\contentsline {subsubsection}{\numberline {5.1.3.12}setgal\_vid()}{15}{subsubsection.5.1.3.12}%
+\contentsline {subsubsection}{\numberline {5.1.3.13}setnd()}{15}{subsubsection.5.1.3.13}%
+\contentsline {subsubsection}{\numberline {5.1.3.14}setpav()}{15}{subsubsection.5.1.3.14}%
+\contentsline {subsubsection}{\numberline {5.1.3.15}setvar()}{16}{subsubsection.5.1.3.15}%
+\contentsline {subsection}{\numberline {5.1.4}Friends And Related Symbol Documentation}{16}{subsection.5.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.4.1}operator$<$$<$}{16}{subsubsection.5.1.4.1}%
+\contentsline {subsubsection}{\numberline {5.1.4.2}operator$>$$>$}{16}{subsubsection.5.1.4.2}%
+\contentsline {section}{\numberline {5.2}zmogus Class Reference}{16}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Detailed Description}{17}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Constructor \& Destructor Documentation}{17}{subsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}zmogus()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{17}{subsubsection.5.2.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2.2}$\sim $zmogus()}{17}{subsubsection.5.2.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.3}zmogus()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{18}{subsubsection.5.2.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.2.4}zmogus()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{19}{subsubsection.5.2.2.4}%
+\contentsline {subsection}{\numberline {5.2.3}Member Function Documentation}{19}{subsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.3.1}getpav()}{19}{subsubsection.5.2.3.1}%
+\contentsline {subsubsection}{\numberline {5.2.3.2}getvar()}{19}{subsubsection.5.2.3.2}%
+\contentsline {subsubsection}{\numberline {5.2.3.3}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{19}{subsubsection.5.2.3.3}%
+\contentsline {subsubsection}{\numberline {5.2.3.4}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{19}{subsubsection.5.2.3.4}%
+\contentsline {subsubsection}{\numberline {5.2.3.5}setpav()}{20}{subsubsection.5.2.3.5}%
+\contentsline {subsubsection}{\numberline {5.2.3.6}setvar()}{20}{subsubsection.5.2.3.6}%
+\contentsline {subsection}{\numberline {5.2.4}Member Data Documentation}{20}{subsection.5.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.4.1}pav}{20}{subsubsection.5.2.4.1}%
+\contentsline {subsubsection}{\numberline {5.2.4.2}var}{20}{subsubsection.5.2.4.2}%
+\contentsline {chapter}{\numberline {6}File Documentation}{21}{chapter.6}%
+\contentsline {section}{\numberline {6.1}funkcijos.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{21}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Function Documentation}{22}{subsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.1}calculateResults()}{22}{subsubsection.6.1.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.2}failuGeneravimas()}{22}{subsubsection.6.1.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.1.3}failuNuskaitymas()}{22}{subsubsection.6.1.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.1.4}isvalymas()}{22}{subsubsection.6.1.1.4}%
+\contentsline {subsubsection}{\numberline {6.1.1.5}isvedimas()}{23}{subsubsection.6.1.1.5}%
+\contentsline {subsubsection}{\numberline {6.1.1.6}ivedimas()}{23}{subsubsection.6.1.1.6}%
+\contentsline {subsubsection}{\numberline {6.1.1.7}konteineriai()}{23}{subsubsection.6.1.1.7}%
+\contentsline {subsubsection}{\numberline {6.1.1.8}meniu()}{23}{subsubsection.6.1.1.8}%
+\contentsline {subsubsection}{\numberline {6.1.1.9}meniuAntras()}{24}{subsubsection.6.1.1.9}%
+\contentsline {subsubsection}{\numberline {6.1.1.10}pagalMediana()}{24}{subsubsection.6.1.1.10}%
+\contentsline {subsubsection}{\numberline {6.1.1.11}pagalPavarde()}{24}{subsubsection.6.1.1.11}%
+\contentsline {subsubsection}{\numberline {6.1.1.12}pagalVarda()}{24}{subsubsection.6.1.1.12}%
+\contentsline {subsubsection}{\numberline {6.1.1.13}pagalVidurki()}{25}{subsubsection.6.1.1.13}%
+\contentsline {subsubsection}{\numberline {6.1.1.14}pirmasP()}{25}{subsubsection.6.1.1.14}%
+\contentsline {subsubsection}{\numberline {6.1.1.15}rikiavimas()}{25}{subsubsection.6.1.1.15}%
+\contentsline {subsubsection}{\numberline {6.1.1.16}rikiavimoklausimas()}{25}{subsubsection.6.1.1.16}%
+\contentsline {subsubsection}{\numberline {6.1.1.17}testavimoRezultatai()}{25}{subsubsection.6.1.1.17}%
+\contentsline {subsubsection}{\numberline {6.1.1.18}treciasP()}{26}{subsubsection.6.1.1.18}%
+\contentsline {subsubsection}{\numberline {6.1.1.19}trukmesSkaiciavimas()}{26}{subsubsection.6.1.1.19}%
+\contentsline {section}{\numberline {6.2}funkcijos.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{26}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{27}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Function Documentation}{27}{subsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.1}calculateResults()}{27}{subsubsection.6.2.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2.2}failuGeneravimas()}{28}{subsubsection.6.2.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.3}failuNuskaitymas()}{28}{subsubsection.6.2.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.2.4}isvalymas()}{28}{subsubsection.6.2.2.4}%
+\contentsline {subsubsection}{\numberline {6.2.2.5}isvedimas()}{28}{subsubsection.6.2.2.5}%
+\contentsline {subsubsection}{\numberline {6.2.2.6}ivedimas()}{29}{subsubsection.6.2.2.6}%
+\contentsline {subsubsection}{\numberline {6.2.2.7}konteineriai()}{29}{subsubsection.6.2.2.7}%
+\contentsline {subsubsection}{\numberline {6.2.2.8}meniu()}{29}{subsubsection.6.2.2.8}%
+\contentsline {subsubsection}{\numberline {6.2.2.9}meniuAntras()}{29}{subsubsection.6.2.2.9}%
+\contentsline {subsubsection}{\numberline {6.2.2.10}pagalMediana()}{29}{subsubsection.6.2.2.10}%
+\contentsline {subsubsection}{\numberline {6.2.2.11}pagalPavarde()}{30}{subsubsection.6.2.2.11}%
+\contentsline {subsubsection}{\numberline {6.2.2.12}pagalVarda()}{30}{subsubsection.6.2.2.12}%
+\contentsline {subsubsection}{\numberline {6.2.2.13}pagalVidurki()}{30}{subsubsection.6.2.2.13}%
+\contentsline {subsubsection}{\numberline {6.2.2.14}pirmasP()}{31}{subsubsection.6.2.2.14}%
+\contentsline {subsubsection}{\numberline {6.2.2.15}rikiavimas()}{31}{subsubsection.6.2.2.15}%
+\contentsline {subsubsection}{\numberline {6.2.2.16}rikiavimoklausimas()}{31}{subsubsection.6.2.2.16}%
+\contentsline {subsubsection}{\numberline {6.2.2.17}testavimoRezultatai()}{31}{subsubsection.6.2.2.17}%
+\contentsline {subsubsection}{\numberline {6.2.2.18}treciasP()}{31}{subsubsection.6.2.2.18}%
+\contentsline {subsubsection}{\numberline {6.2.2.19}trukmesSkaiciavimas()}{32}{subsubsection.6.2.2.19}%
+\contentsline {section}{\numberline {6.3}funkcijos.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{32}{section.6.3}%
+\contentsline {section}{\numberline {6.4}OOP.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{33}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Function Documentation}{33}{subsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.1.1}main()}{33}{subsubsection.6.4.1.1}%
+\contentsline {section}{\numberline {6.5}out/build/x64-\/debug/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CMake\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Files/3.28.0-\/msvc1/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Compiler\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Id\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}C/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CMake\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CCompiler\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Id.c File Reference}{33}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Macro Definition Documentation}{34}{subsection.6.5.1}%
+\contentsline {subsubsection}{\numberline {6.5.1.1}\_\_has\_include}{34}{subsubsection.6.5.1.1}%
+\contentsline {subsubsection}{\numberline {6.5.1.2}ARCHITECTURE\_ID}{34}{subsubsection.6.5.1.2}%
+\contentsline {subsubsection}{\numberline {6.5.1.3}C\_VERSION}{34}{subsubsection.6.5.1.3}%
+\contentsline {subsubsection}{\numberline {6.5.1.4}COMPILER\_ID}{34}{subsubsection.6.5.1.4}%
+\contentsline {subsubsection}{\numberline {6.5.1.5}DEC}{34}{subsubsection.6.5.1.5}%
+\contentsline {subsubsection}{\numberline {6.5.1.6}HEX}{34}{subsubsection.6.5.1.6}%
+\contentsline {subsubsection}{\numberline {6.5.1.7}PLATFORM\_ID}{34}{subsubsection.6.5.1.7}%
+\contentsline {subsubsection}{\numberline {6.5.1.8}STRINGIFY}{34}{subsubsection.6.5.1.8}%
+\contentsline {subsubsection}{\numberline {6.5.1.9}STRINGIFY\_HELPER}{34}{subsubsection.6.5.1.9}%
+\contentsline {subsection}{\numberline {6.5.2}Function Documentation}{35}{subsection.6.5.2}%
+\contentsline {subsubsection}{\numberline {6.5.2.1}main()}{35}{subsubsection.6.5.2.1}%
+\contentsline {subsection}{\numberline {6.5.3}Variable Documentation}{35}{subsection.6.5.3}%
+\contentsline {subsubsection}{\numberline {6.5.3.1}info\_arch}{35}{subsubsection.6.5.3.1}%
+\contentsline {subsubsection}{\numberline {6.5.3.2}info\_compiler}{35}{subsubsection.6.5.3.2}%
+\contentsline {subsubsection}{\numberline {6.5.3.3}info\_language\_extensions\_default}{35}{subsubsection.6.5.3.3}%
+\contentsline {subsubsection}{\numberline {6.5.3.4}info\_language\_standard\_default}{35}{subsubsection.6.5.3.4}%
+\contentsline {subsubsection}{\numberline {6.5.3.5}info\_platform}{35}{subsubsection.6.5.3.5}%
+\contentsline {section}{\numberline {6.6}out/build/x64-\/debug/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CMake\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Files/3.28.0-\/msvc1/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Compiler\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Id\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CXX/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CMake\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CXXCompiler\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Id.cpp File Reference}{35}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Macro Definition Documentation}{36}{subsection.6.6.1}%
+\contentsline {subsubsection}{\numberline {6.6.1.1}\_\_has\_include}{36}{subsubsection.6.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.6.1.2}ARCHITECTURE\_ID}{36}{subsubsection.6.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.6.1.3}COMPILER\_ID}{36}{subsubsection.6.6.1.3}%
+\contentsline {subsubsection}{\numberline {6.6.1.4}CXX\_STD}{36}{subsubsection.6.6.1.4}%
+\contentsline {subsubsection}{\numberline {6.6.1.5}DEC}{36}{subsubsection.6.6.1.5}%
+\contentsline {subsubsection}{\numberline {6.6.1.6}HEX}{36}{subsubsection.6.6.1.6}%
+\contentsline {subsubsection}{\numberline {6.6.1.7}PLATFORM\_ID}{36}{subsubsection.6.6.1.7}%
+\contentsline {subsubsection}{\numberline {6.6.1.8}STRINGIFY}{36}{subsubsection.6.6.1.8}%
+\contentsline {subsubsection}{\numberline {6.6.1.9}STRINGIFY\_HELPER}{37}{subsubsection.6.6.1.9}%
+\contentsline {subsection}{\numberline {6.6.2}Function Documentation}{37}{subsection.6.6.2}%
+\contentsline {subsubsection}{\numberline {6.6.2.1}main()}{37}{subsubsection.6.6.2.1}%
+\contentsline {subsection}{\numberline {6.6.3}Variable Documentation}{37}{subsection.6.6.3}%
+\contentsline {subsubsection}{\numberline {6.6.3.1}info\_arch}{37}{subsubsection.6.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.6.3.2}info\_compiler}{37}{subsubsection.6.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.6.3.3}info\_language\_extensions\_default}{37}{subsubsection.6.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.6.3.4}info\_language\_standard\_default}{37}{subsubsection.6.6.3.4}%
+\contentsline {subsubsection}{\numberline {6.6.3.5}info\_platform}{37}{subsubsection.6.6.3.5}%
+\contentsline {section}{\numberline {6.7}out/build/x64-\/debug/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CMake\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Files/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Show\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Includes/foo.h File Reference}{37}{section.6.7}%
+\contentsline {section}{\numberline {6.8}foo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{37}{section.6.8}%
+\contentsline {section}{\numberline {6.9}out/build/x64-\/debug/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CMake\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Files/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Show\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Includes/main.c File Reference}{38}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Function Documentation}{38}{subsection.6.9.1}%
+\contentsline {subsubsection}{\numberline {6.9.1.1}main()}{38}{subsubsection.6.9.1.1}%
+\contentsline {section}{\numberline {6.10}README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{38}{section.6.10}%
+\contentsline {section}{\numberline {6.11}studentas.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp File Reference}{38}{section.6.11}%
+\contentsline {subsection}{\numberline {6.11.1}Function Documentation}{38}{subsection.6.11.1}%
+\contentsline {subsubsection}{\numberline {6.11.1.1}operator$<$$<$()}{38}{subsubsection.6.11.1.1}%
+\contentsline {subsubsection}{\numberline {6.11.1.2}operator$>$$>$()}{38}{subsubsection.6.11.1.2}%
+\contentsline {section}{\numberline {6.12}studentas.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{39}{section.6.12}%
+\contentsline {subsection}{\numberline {6.12.1}Detailed Description}{39}{subsection.6.12.1}%
+\contentsline {section}{\numberline {6.13}studentas.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{39}{section.6.13}%
