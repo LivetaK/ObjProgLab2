@@ -93,6 +93,7 @@ int main() {
                     }
                     naujasStud.seteg(rand() % 10 + 1);
                     studentai.push_back(naujasStud);
+                    pazymiai.clear();
                 }
                 calculateResults(studentai);
                 isvedimas(studentai, cout, rikiavimoklausimas());
