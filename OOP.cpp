@@ -299,6 +299,8 @@ int main() {
             mok movintas = move(originalus);
             assert(movintas.getvar() == "vardziukas" && movintas.getpav() == "pavardziukas" &&
                 movintas.geteg() == 7 && movintas.getnd() == vector<int>({ 1, 5, 8 }));
+            assert(originalus.getvar().empty() && originalus.getpav().empty() &&
+                originalus.geteg() == 0 && originalus.getnd().empty());
             testavimoRezultatai(true, "move konstruktorius");
 
             //copy assignmento testavimas
@@ -320,6 +322,8 @@ int main() {
 
             assert(movintas2.getvar() == "vardenis" && movintas2.getpav() == "pavardenis" &&
                 movintas2.geteg() == 10 && movintas2.getnd() == vector<int>({ 4, 9, 9 }));
+            assert(originalus2.getvar().empty() && originalus2.getpav().empty() &&
+                originalus2.geteg() == 0 && originalus2.getnd().empty());
             testavimoRezultatai(true, "move assignmentas");
 
             // isvesties operatoriaus testavimas
