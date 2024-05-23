@@ -134,7 +134,7 @@ int main() {
         /*int studentuKiekis = 1000000;
         string failoPavadinimas = "studentai" + to_string(studentuKiekis) + ".txt";*/
 
-        // NAUDOTOJAS ĮVEDA FAILO PAVADINIMA
+        // NAUDOTOJAS IVEDA FAILO PAVADINIMA
 
         cout << "Kiek studentu reikes apdoroti programai?" << endl;
         int studentuKiekis;
