@@ -165,4 +165,3 @@ istream& operator>>(istream& input, mok& stud) {
     stud.setnd(namuD);
     return input;
 }
-//klases pabaiga
