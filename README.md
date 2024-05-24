@@ -19,7 +19,7 @@ public:
     zmogus& operator=(zmogus&& laikStud) noexcept;  // Move assignment operator
 };
 ```
-kadangi klasė yra abstrakti, naujas objektas tipo "zmogus", nėra leistinas:
+Kadangi klasė yra abstrakti, naujas objektas tipo "zmogus", nėra leistinas:
 
 
 ![image](https://github.com/LivetaK/ObjProgLab2/assets/159531709/944fbe49-1fad-4fdc-a9e0-e218090f0647)
