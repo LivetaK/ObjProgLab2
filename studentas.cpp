@@ -1,6 +1,8 @@
 #include "studentas.h"
 #include "funkcijos.h"
 
+
+//GETTERIAI IR SETTERIAI
 void mok::setvar(const string& vardas) {
     var = vardas;
 }
