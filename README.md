@@ -8,27 +8,18 @@ KAIP VEIKIA PROGRAMA
 4. Vedant vis naujus duomenis, programa paklaus jai rūpimų klausimų, kurie būtini galutinio balo skaičiavimui;
 5. Jei buvo pasirinkta duomenis skaityti iš failo, reiks pasirinkti, ir kur juos išvesti - ar į ekraną, ar į naujai sugeneruotą failą.
 
+PASIRUOŠIMAS
 
+Prieš naudojant programą, reikia atsisiųsti Visual Studio: https://visualstudio.microsoft.com/downloads/ paspaudę "download" būsite nunaviguoti į puslapį, kuriame bus paaiškinta, kaip dirbti su Visual Studio.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Taip pat reikia atsisiųsti CMake, kuris jums paruoš .exe failus, kad galėtumėte iš karto naudoti programą: https://cmake.org/download/ . Atsisiuntę nueikite į komandinę eilute, nunaviguokite į aplanką, kuriame yra šis projektas (naudokite komandą cd ir įrašykište kelią). Tada įveskite 
+```cpp
+cmake -G "Visual Studio 17 2022" -A x64 .
+```
+Ir:
+```cpp
+cmake --build . --config Release
+```
 
 
 
