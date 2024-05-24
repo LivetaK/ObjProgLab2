@@ -1,4 +1,4 @@
-<h6>***Objektinio programavimo užduotis***</h6>
+<h1>***Objektinio programavimo užduotis***</h1>
 
 ***
 
