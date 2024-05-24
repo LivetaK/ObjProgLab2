@@ -235,6 +235,7 @@ int main() {
 
                 meniuAntras(ketvirtasPasirinkimas);
 
+                // RIKIAVIMAS
                 auto rikiavimoPradzia = high_resolution_clock::now();
                 rikiavimas(ketvirtasPasirinkimas, studentai);
                 auto rikiavimoPabaiga = high_resolution_clock::now();
