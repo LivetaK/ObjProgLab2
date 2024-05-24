@@ -25,7 +25,6 @@ public:
     zmogus& operator=(zmogus&& laikStud) noexcept;  // Move assignment operator
 };
 
-
 class mok : public zmogus {
 private:
     int eg = 0;
