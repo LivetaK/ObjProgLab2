@@ -56,7 +56,7 @@ zmogus::zmogus(const zmogus& laikStud)
     pav(laikStud.pav) {};
 
 
-//copy assignment op
+//copy assignment operator
 zmogus& zmogus::operator=(const zmogus& laikStud) {
     if (this != &laikStud) {
         var = laikStud.var;
