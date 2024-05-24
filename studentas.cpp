@@ -64,7 +64,7 @@ zmogus& zmogus::operator=(const zmogus& laikStud) {
     }
     return *this;
 }
-//move con
+//move constructor
 
 
 zmogus::zmogus(zmogus&& laikStud) noexcept
