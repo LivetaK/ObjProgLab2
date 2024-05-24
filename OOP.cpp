@@ -13,7 +13,6 @@ int main() {
 
     srand(time(NULL));
 
-
     pirmasP(pirmasPasirinkimas);    //PASIRINKIMAS, AR DUOMENYS IVEDAMI RANKA, AR NUSKAITOMI IS FAILO
 
     if (pirmasPasirinkimas == 1) {    //JEI NORIMA DUOMENIS IVESTI RANKA
