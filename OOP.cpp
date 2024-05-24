@@ -217,7 +217,7 @@ int main() {
                 cout << "Isvedimas truko: " << trukmesSkaiciavimas(isvedimoPradzia, isvedimoPabaiga).count() << " ms" << endl;
                 cout << endl;
                 cout << "Programa truko: " << trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() + trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() + trukmesSkaiciavimas(rikiavimoPradzia, rikiavimoPabaiga).count() + trukmesSkaiciavimas(rusiavimoPradzia, rusiavimoPabaiga).count() + trukmesSkaiciavimas(isvedimoPradzia, isvedimoPabaiga).count() << "ms" << endl;
-            }
+            }  // nepamirsti prideti generavimo laiko
             else {//NORIMA, KAD DUOMENYS BUTU ISVESTI I FAILUS
 
                 //SUKURIAMI FAILAI ISVEDIMUI
