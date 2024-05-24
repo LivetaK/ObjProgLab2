@@ -71,7 +71,7 @@ zmogus::zmogus(zmogus&& laikStud) noexcept
     pav(move(laikStud.pav)) {};
 
 
-//move assignment op
+//move assignment operator
 zmogus& zmogus::operator=(zmogus&& laikStud) noexcept {
     if (this != &laikStud) {
         var = move(laikStud.var);
