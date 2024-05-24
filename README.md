@@ -166,9 +166,6 @@ OPTIMIZAVIMAS
 ![image](https://github.com/LivetaK/ObjProgLab2/assets/159531709/b1a48bc4-1482-430a-9031-01a3f9f471d8)
 
 
-
-
-
 KAIP VEIKIA PROGRAMA
 
 Ši programa skaičiuoja studentų galutinį tam tikro kurso balą, naudodama studento pažymius ir egzaminų rezultatus. Programa realizuota su trimis skirtingais konteineriais: vector, deque, list; ir su trejomis skirtingomis strategijomis, todėl galima pasirinkti, kaip norima dirbti. Galima duomenis įvedinėti ranka, galima ir liepti programai juos skaityti iš failo. Štai taip veikia paleista programa:
