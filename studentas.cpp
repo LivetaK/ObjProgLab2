@@ -141,6 +141,7 @@ mok& mok::operator=(mok&& laikStud) noexcept {
     return *this;
 }
 
+// output operatorius
 ostream& operator<<(ostream& output, const mok& stud) {
     output << stud.getvar() << " " << stud.getpav() << " " << stud.geteg() << " ";
     vector<int> pazymiai = stud.getnd();
