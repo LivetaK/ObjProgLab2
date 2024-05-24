@@ -64,9 +64,8 @@ zmogus& zmogus::operator=(const zmogus& laikStud) {
     }
     return *this;
 }
+
 //move constructor
-
-
 zmogus::zmogus(zmogus&& laikStud) noexcept
     : var(move(laikStud.var)),
     pav(move(laikStud.pav)) {};
