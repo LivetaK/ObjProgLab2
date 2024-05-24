@@ -151,6 +151,7 @@ ostream& operator<<(ostream& output, const mok& stud) {
     return output;
 }
 
+// input operatorius
 istream& operator>>(istream& input, mok& stud) {
     string vardas, pavarde;
     int pazymys, egzaminas;

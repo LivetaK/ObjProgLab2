@@ -261,8 +261,8 @@ int treciasP(int& treciasPasirinkimas) {
     return treciasPasirinkimas;
 }
 
-void rikiavimas(int ketvirtasPasirinkimas, vector<mok>& studentai) {
-    switch (ketvirtasPasirinkimas) {//RIKIAVIMAS
+void rikiavimas(int ketvirtasPasirinkimas, vector<mok>& studentai) {   //RIKIAVIMAS
+    switch (ketvirtasPasirinkimas) {
     case 1:
     {
         sort(studentai.begin(), studentai.end(), pagalVarda);
