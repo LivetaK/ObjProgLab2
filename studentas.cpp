@@ -50,7 +50,7 @@ void mok::isvalymas() {
 
 //RULE OF FIVE ZMOGUS
 
-//copy con
+//copy constructor
 zmogus::zmogus(const zmogus& laikStud)
     : var(laikStud.var),
     pav(laikStud.pav) {};
