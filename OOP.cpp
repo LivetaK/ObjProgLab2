@@ -39,7 +39,10 @@ int main() {
     }
     cout << w.Size() << endl;
     cout << w.Capacity() << endl;
-
+    cout << w.Front() << endl;
+    cout << w.Back() << endl;
+    w.PopBack();
+    cout << w.Back() << endl;
     //int pirmasPasirinkimas, antrasPasirinkimas, treciasPasirinkimas, ketvirtasPasirinkimas, n;
     //string vardas, pavarde;
     //int pazymys, egzaminas;
