@@ -15,20 +15,14 @@ private:
 	T* elements;
 
 public:
-	// MEMBER TYPES (VELIAU)
+	// MEMBER TYPES 
 	using value_type = T;
-	//using allocator_type = Allocator;
-	//using reference = typename allocator_type::reference;
-	//using const_reference = typename allocator_type::const_reference;
-	//using pointer = typename allocator_type::pointer;
-	//using const_pointer = typename allocator_type::const_pointer;
-	//using iterator = T*; // Simplified for this example, should be a proper random access iterator
-	//using const_iterator = const T*; // Simplified for this example, should be a proper random access iterator
-	//using reverse_iterator = std::reverse_iterator<iterator>;
-	//using const_reverse_iterator = std::reverse_iterator<const_iterator>;
-	//using difference_type = typename std::iterator_traits<iterator>::difference_type;
-	//using size_type = std::size_t;
-	
+	using iterator = T*;
+	using const_iterator = const T*;
+	using reference = T&;
+	using const_reference = const T&;
+	using size_type = int;
+
 //*************************************************************************************************************************
 
 	Vector() {									// Vector<int> v; - konstruktorius
@@ -46,7 +40,7 @@ public:
 
 	//RULE OF FIVE
 
-	Vector(const Vector& copy) {				// Vector<int> v(w); - kopijavimo kosntruktorius
+	Vector(const Vector<T>& copy) {				// Vector<int> v(w); - kopijavimo kosntruktorius
 		size = copy.size;
 		capacity = copy.capacity;
 		elements = new T[capacity];
@@ -56,7 +50,7 @@ public:
 	}
 
 
-	Vector& operator = (const Vector& copy) {	// v = w; - kopijavimo priskyrimo operatorius
+	Vector& operator = (const Vector<T>& copy) {	// v = w; - kopijavimo priskyrimo operatorius
 		if (this != &copy) {
 			if (copy.size > capacity) {
 				delete[] elements;
@@ -71,8 +65,29 @@ public:
 		return *this;
 	}
 
-	// perkelimo konstruktorius
+	Vector(Vector<T>&& kitas) noexcept				// v.move(w)
+	:	size(kitas.size),
+		capacity(kitas.capacity),
+		elements(kitas.elements)
+	{
+			kitas.size = 0;
+			kitas.capacity = 0;
+			kitas.elements = nullptr;
+	}
+
 	//perkelimo priskyrimo operatorius
+	Vector& operator=(Vector<T>&& kitas) noexcept {
+		if (this != &kitas) {
+			delete[] elements;
+			size = kitas.size;
+			capacity = kitas.capacity;
+			elements = kitas.elements;
+			kitas.size = 0;
+			kitas.capacity = 0;
+			kitas.elements = nullptr;
+		}
+		return *this;
+	}
 
 //*************************************************************************************************************************
 
@@ -220,30 +235,33 @@ public:
 		size = 0;
 	}
 
-	// TO DO: 
 	void Swap(Vector<T>& first, Vector<T>& second) {		// Swap(v,w)
 		swap(first.size, second.size);
 		swap(first.capacity, second.capacity);
 		swap(first.elements, second.elements);
 	}
-	// emplace
-	// emplace_back
-
-//*************************************************************************************************************************
-
-	//ALLOCATOR
-	// TO DO 
-	// get_allocator
-
-
 
 //*************************************************************************************************************************
 
 	// NON_MEMBER FUNCTION OVERLOADS
 
-	// TO DO:
-	// relationship_operators
-	// swap
+	friend bool operator == (const Vector<T>& first, const Vector<T>& second) {
+		if (first.Size() != second.Size()) {
+			return false;
+		}
+		else {
+			for (int i = 0; i < first.Size(); i++) {
+				if (first.elements[i] != second / elements[i]) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+
+	friend bool operator != (const Vector<T>& first, const Vector<T>& second) {
+		return !(first == second);
+	 }
 
 };
 
