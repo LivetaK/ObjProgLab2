@@ -136,7 +136,7 @@ int main() {
     }
     else if (pirmasPasirinkimas == 2) { //NORIMA DUOMENIS SKAITYTI IS FAILO
 
-            cout << "Kiek studentu norite, kad programa sugeneruotu?" << endl;
+            /*cout << "Kiek studentu norite, kad programa sugeneruotu?" << endl;
             int studentuKiekis;
             while (!(cin >> studentuKiekis) || studentuKiekis < 0) {
                 cout << "Neteisinga ivestis, bandykite dar karta" << endl;
@@ -149,12 +149,12 @@ int main() {
             auto failoGeneravimoPabaiga = high_resolution_clock::now();
             cout << "--------------------------------------------------------" << endl;
             cout << "failas sugeneruotas" << endl;
-            cout << "--------------------------------------------------------" << endl;
+            cout << "--------------------------------------------------------" << endl;*/
 
             // FAILAS JAU EGZISTUOJA (TYRIMUI)
 
-            /*int studentuKiekis = 1000000;
-            string failoPavadinimas = "studentai" + to_string(studentuKiekis) + ".txt";*/
+            int studentuKiekis = 10000000;
+            string failoPavadinimas = "studentai" + to_string(studentuKiekis) + ".txt";
 
             // NAUDOTOJAS ĮVEDA FAILO PAVADINIMA
 
