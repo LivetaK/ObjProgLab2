@@ -221,7 +221,11 @@ public:
 	}
 
 	// TO DO: 
-	// swap
+	void Swap(Vector<T>& first, Vector<T>& second) {		// Swap(v,w)
+		swap(first.size, second.size);
+		swap(first.capacity, second.capacity);
+		swap(first.elements, second.elements);
+	}
 	// emplace
 	// emplace_back
 
