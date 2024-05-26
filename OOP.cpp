@@ -5,6 +5,28 @@
 
 int main() {
 
+    //int STDvektorius = 0;
+    //int MANOvektorius = 0;
+    //unsigned int sz = 100000000;  // 100000, 1000000, 10000000, 100000000
+    //std::vector<int> v1;
+    //for (int i = 1; i <= sz; ++i) {
+    //    v1.push_back(i);
+    //    if (v1.size() == v1.capacity()) {
+    //        STDvektorius++;
+    //    }
+    //}
+    //cout << "std::vector atminties perskirtyma atliko: " << STDvektorius << " kartu" << endl;
+    //Vector<int> v2;
+    //for (int i = 1; i <= sz; ++i) {
+    //    v2.PushBack(i);
+    //    if (v2.Size() == v2.Capacity()) {
+    //        MANOvektorius++;
+    //    }
+    //}
+    //cout << "Vector atminties perskirtyma atliko: " << MANOvektorius << " kartu" << endl;
+
+
+
     int pirmasPasirinkimas, antrasPasirinkimas, treciasPasirinkimas, ketvirtasPasirinkimas, n;
     string vardas, pavarde;
     int pazymys, egzaminas;
