@@ -34,6 +34,67 @@
 **Išvados**
 Kaip matome, Vector klase veikia greičiau, nei std::vector, ir atlieka mažiau perskirstymų
 
+**5 funkcijos ir jų aprašai**
+
+
+## Size()
+
+Gražina vektoriaus dydį, t.y elementų kiekį esantį vektoriuje.
+
+``` cpp
+	int Size() const {
+		return size;        
+	}
+```
+
+## IsEmpty()
+
+Grąžina reikšmę true arba false, priklausomai nuo to, ar vektorius yra tuščias, t. y. ar jo dydis yra lygus nuliui.
+
+```cpp
+bool IsEmpty() const {
+		return size == 0;
+	}
+```
+
+## PushBack()
+
+Tikrina ar vektoriaus dydisnėra lygus jo pajėgumui, kad jo neviršytų. Jei yra, tada vektoriaus pajėgumas (capacity) didinamas dvigubai, jei nėra, tada einama toliau. Į vektoiaus galą prideda norodytą elementą ir vektoriaus dydi vienetu padidina.
+
+```cpp
+	void PushBack(const T& object) {
+		if (size == capacity) {
+			Reserve(capacity * 2);
+		}
+		elements[size] = object;
+		size++;
+	}
+```
+
+
+## PopBack()
+
+Jei vektoriuje yra elementų, sumažina jų kiekį vienetu, tačiau paskutinio elemento neištrina, tik "išpoppina".
+
+```cpp
+	void PopBack() {
+		if (size > 0) {
+			size--;
+		}
+	}
+```
+
+## Clear()
+
+Prilygina vektoriaus dydį nuliui, bet elementį iš atmintinės neištrina.
+
+```cpp
+	void Clear() {								// v.Clear()
+		size = 0;
+	}
+```
+
+
 **V1.5**
 Pridėta bazinė klasė "zmogus":
 ```cpp
