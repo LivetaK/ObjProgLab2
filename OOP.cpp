@@ -5,44 +5,29 @@
 
 int main() {
 
-    Vector<int> v;
-    v.PushBack(1);
-    v.PushBack(40);
-    v.PushBack(50);
-    v.PushBack(30);
-    v.PushBack(40);
-    v.PushBack(50);
-    v.PushBack(30);
-    v.PushBack(40);
-    v.PushBack(50);
-    v.PushBack(30);
-    v.PushBack(40);
-    v.PushBack(50);
-    v.PushBack(30);
-    v.PushBack(40);
-    v.PushBack(2);
-    for (int i = 0; i < v.Size(); i++) {
-        cout << "items[" << i << "] = " << v[i] << endl;
-    }
-    cout << v.Size() << endl;
-    cout << v.Capacity() << endl;
-    v.PopBack();
-    v.Erase(0);
-    cout << v.Size() << endl;
-    cout << v.Capacity() << endl;
+    auto STD_vectorUzpildymoPradzia = high_resolution_clock::now();
+    unsigned int sz = 100000000;  // 100000, 1000000, 10000000, 100000000
+    vector<int> v1;
+    for (int i = 1; i <= sz; ++i)
+        v1.push_back(i);
+    auto STDvectorUzpildymoPabaiga = high_resolution_clock::now();
+
+    cout << "Uzpilde STD vector" << endl;
 
 
-    Vector<int> w;
-    w = v;
-    for (int i = 0; i < w.Size(); i++) {
-        cout << "items[" << i << "] = " << w[i] << endl;
-    }
-    cout << w.Size() << endl;
-    cout << w.Capacity() << endl;
-    cout << w.Front() << endl;
-    cout << w.Back() << endl;
-    w.PopBack();
-    cout << w.Back() << endl;
+    auto MANO_VectorUzpildymoPradzia = high_resolution_clock::now();
+    Vector<int> v2;
+    for (int i = 1; i <= sz; ++i)
+        v2.PushBack(i);
+    auto MANO_VectorUzpildymoPabaiga = high_resolution_clock::now();
+
+    cout << "Uzpilde mano Vector" << endl;
+
+    cout << "std::vector su" << sz << " elementu uzpildymas truko:  " << trukmesSkaiciavimas(STD_vectorUzpildymoPradzia, STDvectorUzpildymoPabaiga) << endl;
+
+    cout << "mano Vector su" << sz << " elementu uzpildymas truko:  " << trukmesSkaiciavimas(MANO_VectorUzpildymoPradzia, MANO_VectorUzpildymoPabaiga) << endl;
+
+
     //int pirmasPasirinkimas, antrasPasirinkimas, treciasPasirinkimas, ketvirtasPasirinkimas, n;
     //string vardas, pavarde;
     //int pazymys, egzaminas;

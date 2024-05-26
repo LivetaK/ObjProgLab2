@@ -2,6 +2,9 @@
 #define VECTOR_H
 
 #include <stdexcept>
+#include <algorithm>
+#include <limits>
+
 
 using namespace std;
 
@@ -65,7 +68,7 @@ public:
 		return *this;
 	}
 
-	Vector(Vector<T>&& kitas) noexcept				// v.move(w)
+	Vector(Vector<T>&& kitas) noexcept				// -perkelimo konstruktosius
 	:	size(kitas.size),
 		capacity(kitas.capacity),
 		elements(kitas.elements)
@@ -75,8 +78,7 @@ public:
 			kitas.elements = nullptr;
 	}
 
-	//perkelimo priskyrimo operatorius
-	Vector& operator=(Vector<T>&& kitas) noexcept {
+	Vector& operator=(Vector<T>&& kitas) noexcept { // perkelimo priskyrimo operatorius
 		if (this != &kitas) {
 			delete[] elements;
 			size = kitas.size;
@@ -195,7 +197,7 @@ public:
 
 	void PushBack(const T& object) {			// v.PushBack('a')
 		if (size == capacity) {
-			Resize(capacity * 2);
+			Reserve(capacity * 2);
 		}
 		elements[size] = object;				// eina i paskutine pozicija ir ideda nauja elementa
 		size++;									//pridejus nauja elementa gale, padidinam ir size
@@ -251,7 +253,7 @@ public:
 		}
 		else {
 			for (int i = 0; i < first.Size(); i++) {
-				if (first.elements[i] != second / elements[i]) {
+				if (first.elements[i] != second.elements[i]) {
 					return false;
 				}
 			}
