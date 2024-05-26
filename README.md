@@ -5,7 +5,6 @@
 **V3.0**
 
 #Užpildymo greitis
-
 |             | std::vector |    Vector   |
 | ----------- | ----------- | ----------- |
 | 10 000      | 0 ms        | 0  ms       |
