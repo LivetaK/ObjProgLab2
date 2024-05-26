@@ -8,8 +8,8 @@ int main() {
     int pirmasPasirinkimas, antrasPasirinkimas, treciasPasirinkimas, ketvirtasPasirinkimas, n;
     string vardas, pavarde;
     int pazymys, egzaminas;
-    vector<int> pazymiai;
-    vector<mok> studentai;
+    Vector<int> pazymiai;
+    Vector<mok> studentai;
     string vardai[] = { "Liveta", "Roberta", "Paulina", "Ugne", "Gabriele", "Kamile", "Marija", "Rugile", "Jovita", "Adriana" };
     string pavardes[] = { "Kavaliauskaite", "Jurpalyte", "Podgaiska", "Mockute", "Vaitiekute", "Zobelaite", "Zubareva", "Macaite", "Vencauskaite", "Sirokyte" };
 
@@ -56,12 +56,12 @@ int main() {
                     int sum = 0;
                     for (int j = 0; j < pazymiukiekis; j++) {
                         int rand_paz = rand() % 10 + 1;
-                        pazymiai.push_back(rand_paz);
+                        pazymiai.PushBack(rand_paz);
                         sum += rand_paz;
                     }
                     naujasStud.setnd(pazymiai);
                     naujasStud.seteg(rand() % 10 + 1);
-                    studentai.push_back(naujasStud);
+                    studentai.PushBack(naujasStud);
                 }
                 calculateResults(studentai);
                 isvedimas(studentai, cout, rikiavimoklausimas());
@@ -88,13 +88,13 @@ int main() {
                     double sum = 0;
                     for (int j = 0; j < pazymiukiekis; j++) {
                         int rand_paz = rand() % 10 + 1;
-                        pazymiai.push_back(rand_paz);
+                        pazymiai.PushBack(rand_paz);
                         naujasStud.setnd(pazymiai);
                         sum += rand_paz;
                     }
                     naujasStud.seteg(rand() % 10 + 1);
-                    studentai.push_back(naujasStud);
-                    pazymiai.clear();
+                    studentai.PushBack(naujasStud);
+                    pazymiai.Clear();
                 }
                 calculateResults(studentai);
                 isvedimas(studentai, cout, rikiavimoklausimas());
@@ -114,7 +114,7 @@ int main() {
     }
     else if (pirmasPasirinkimas == 2) { //NORIMA DUOMENIS SKAITYTI IS FAILO
 
-          /*  cout << "Kiek studentu norite, kad programa sugeneruotu?" << endl;
+            cout << "Kiek studentu norite, kad programa sugeneruotu?" << endl;
             int studentuKiekis;
             while (!(cin >> studentuKiekis) || studentuKiekis < 0) {
                 cout << "Neteisinga ivestis, bandykite dar karta" << endl;
@@ -127,7 +127,7 @@ int main() {
             auto failoGeneravimoPabaiga = high_resolution_clock::now();
             cout << "--------------------------------------------------------" << endl;
             cout << "failas sugeneruotas" << endl;
-            cout << "--------------------------------------------------------" << endl;*/
+            cout << "--------------------------------------------------------" << endl;
 
             // FAILAS JAU EGZISTUOJA (TYRIMUI)
 
@@ -136,7 +136,7 @@ int main() {
 
             // NAUDOTOJAS ĮVEDA FAILO PAVADINIMA
 
-            cout << "Kiek studentu reikes apdoroti programai?" << endl;
+            /*cout << "Kiek studentu reikes apdoroti programai?" << endl;
             int studentuKiekis;
             while (!(cin >> studentuKiekis) || studentuKiekis < 1) {
                 cout << "Neteisinga ivestis. Bandykite dar karta" << endl;
@@ -146,7 +146,7 @@ int main() {
             cout << "Iveskite failo pavadinima" << endl;
             string failoPavadinimas;
             cin >> failoPavadinimas;
-            failoPavadinimas += ".txt";
+            failoPavadinimas += ".txt";*/
 
             //NUSKAITYMAS IS FAILO
             auto nuskaitymoPradzia = high_resolution_clock::now();
@@ -183,7 +183,7 @@ int main() {
                 cout << "--------------------------------------------------------" << endl;
 
                 //KONTEINERIU KURIMAS
-                vector<mok> vargsiukai;
+                Vector<mok> vargsiukai;
 
                 char kl = rikiavimoklausimas();
 
@@ -247,7 +247,7 @@ int main() {
                 //RIKIAVIMAS BAIGTAS
 
                 //KONTEINERIU KURIMAS
-                vector<mok> vargsiukai;
+                Vector<mok> vargsiukai;
 
                 char kl = rikiavimoklausimas();
 
@@ -294,13 +294,13 @@ int main() {
 
             // kopijavimo konstruktoriaus testavimas
             assert(kopija.getvar() == "vardziukas" && kopija.getpav() == "pavardziukas" &&
-                kopija.geteg() == 7 && kopija.getnd() == vector<int>({1, 5, 8}));
+                kopija.geteg() == 7 && kopija.getnd() == Vector<int>({1, 5, 8}));
             testavimoRezultatai(true, "kopijavimo konstruktorius");
 
             //move konstruktoriaus testavimas
             mok movintas = move(originalus);
             assert(movintas.getvar() == "vardziukas" && movintas.getpav() == "pavardziukas" &&
-                movintas.geteg() == 7 && movintas.getnd() == vector<int>({ 1, 5, 8 }));
+                movintas.geteg() == 7 && movintas.getnd() == Vector<int>({ 1, 5, 8 }));
             assert(originalus.getvar().empty() && originalus.getpav().empty() &&
                 originalus.geteg() == 0 && originalus.getnd().empty());
             
@@ -316,7 +316,7 @@ int main() {
             kopija2 = originalus2;
 
             assert(kopija2.getvar() == "vardenis" && kopija2.getpav() == "pavardenis" &&
-                kopija2.geteg() == 10 && kopija2.getnd() == vector<int>({ 4, 9, 9 }));
+                kopija2.geteg() == 10 && kopija2.getnd() == Vector<int>({ 4, 9, 9 }));
             testavimoRezultatai(true, "kopijavimo assignmentas");
 
             // move assignmento testavimas
@@ -324,7 +324,7 @@ int main() {
             movintas2 = move(originalus2);
 
             assert(movintas2.getvar() == "vardenis" && movintas2.getpav() == "pavardenis" &&
-                movintas2.geteg() == 10 && movintas2.getnd() == vector<int>({ 4, 9, 9 }));
+                movintas2.geteg() == 10 && movintas2.getnd() == Vector<int>({ 4, 9, 9 }));
             assert(originalus2.getvar().empty() && originalus2.getpav().empty() &&
                 originalus2.geteg() == 0 && originalus2.getnd().empty());
             
@@ -349,7 +349,7 @@ int main() {
             assert(studentas.getvar() == "vardas");
             assert(studentas.getpav() == "pavarde");
             assert(studentas.geteg() == 1);
-            assert(studentas.getnd() == vector<int>({2, 3}));
+            assert(studentas.getnd() == Vector<int>({2, 3}));
             testavimoRezultatai(true, "ivesties operatorius");
 
     }

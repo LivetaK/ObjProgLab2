@@ -34,6 +34,13 @@ public:
 		elements = new T[DEFAULT_VECTOR_SIZE];
 	}
 
+	Vector(initializer_list<T> init_list) { // Intializer list konstruktorius
+		size = init_list.size();
+		capacity = size > DEFAULT_VECTOR_SIZE ? size : DEFAULT_VECTOR_SIZE;
+		elements = new T[capacity];
+		copy(init_list.begin(), init_list.end(), elements);
+	}
+
 	~Vector() {									// Destruktorius
 		delete[] elements;
 
@@ -94,13 +101,18 @@ public:
 //*************************************************************************************************************************
 
 	// ITERTAORS
-	T* Begin() {							// v.Begin()
+	iterator Begin() {							// v.Begin()
 		return elements;
 	}
-	T* End() {								//v.End()
+	iterator End() {								//v.End()
 		return elements + size;
 	}
-	
+	const_iterator begin() const {					// const version of v.begin()
+		return elements;
+	}
+	const_iterator end() const {                  // const version of v.end()
+		return elements + size;
+	}
 //*************************************************************************************************************************
 
 
@@ -223,6 +235,30 @@ public:
 		size++;
 	}
 
+	template <typename InputIt>
+	void Insert(iterator pos, InputIt first, InputIt last) {
+		int index = pos - Begin();
+		int numElements = last - first;
+
+		if (index < 0 || index > size) {
+			throw out_of_range("Netinkamas indeksas");
+		}
+
+		if (size + numElements > capacity) {
+			Reserve((size + numElements) * 2);
+		}
+
+		for (int i = size - 1; i >= index; --i) {
+			elements[i + numElements] = elements[i];
+		}
+
+		for (int i = 0; i < numElements; ++i) {
+			elements[index + i] = *(first + i);
+		}
+
+		size += numElements;
+	}
+
 	void Erase(int index) {						// v.Erase(1)
 		if (index < 0 || index >= size) {
 			throw out_of_range("Netinkamas indeksas");
@@ -231,6 +267,18 @@ public:
 			elements[i] = elements[i + 1];
 		}
 		size--;
+	}
+
+	void Erase(iterator first, iterator last) {
+		if (first < Begin() || last > End() || first > last) {
+			throw out_of_range("Netinkamas intervalas");
+		}
+
+		int numElements = last - first;
+		for (iterator it = first; it != End() - numElements; ++it) {
+			*it = *(it + numElements);
+		}
+		size -= numElements;
 	}
 
 	void Clear() {								// v.Clear()

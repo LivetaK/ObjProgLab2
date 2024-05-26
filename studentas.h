@@ -2,8 +2,8 @@
 #define STUDENTAS_H
 
 #include <iostream>
-#include <vector>
 #include <string>
+#include "Vector.hpp"
 
 using namespace std;
 
@@ -28,7 +28,7 @@ public:
 class mok : public zmogus {
 private:
     int eg = 0;
-    vector<int> nd = { 0 };
+    Vector<int> nd = { 0 };
     double gal_vid = 0.0, gal_med = 0.0;
 public:
     void setvar(const string& vardas);
@@ -41,8 +41,8 @@ public:
     double getgal_vid() const;
     void setgal_med(double Gal_med);
     double getgal_med() const;
-    void setnd(const vector<int>& ND);
-    vector<int> getnd() const;
+    void setnd(const Vector<int>& ND);
+    Vector<int> getnd() const;
 
     void isvalymas();
     // RULE OF FIVE:

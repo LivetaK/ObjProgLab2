@@ -1,5 +1,6 @@
 #include "studentas.h"
 #include "funkcijos.h"
+#include "Vector.hpp"
 
 
 //GETTERIAI IR SETTERIAI
@@ -33,14 +34,14 @@ void mok::setgal_med(double Gal_med) {
 double mok::getgal_med() const {
     return gal_med;
 }
-void mok::setnd(const vector<int>& ND) {
+void mok::setnd(const Vector<int>& ND) {
     nd = ND;
 }
-vector<int> mok::getnd() const {
+Vector<int> mok::getnd() const {
     return nd;
 }
 void mok::isvalymas() {
-    nd.clear();
+    nd.Clear();
     var.clear();
     pav.clear();
     eg = 0;
@@ -84,7 +85,7 @@ zmogus& zmogus::operator=(zmogus&& laikStud) noexcept {
 
 // Destructor
 mok::~mok() {
-    nd.clear();
+    nd.Clear();
 }
 
 // Copy Constructor
@@ -144,7 +145,7 @@ mok& mok::operator=(mok&& laikStud) noexcept {
 // output operatorius
 ostream& operator<<(ostream& output, const mok& stud) {
     output << stud.getvar() << " " << stud.getpav() << " " << stud.geteg() << " ";
-    vector<int> pazymiai = stud.getnd();
+    Vector<int> pazymiai = stud.getnd();
     for (int pazymys : pazymiai) {
         output << pazymys << " ";
     }
@@ -155,14 +156,14 @@ ostream& operator<<(ostream& output, const mok& stud) {
 istream& operator>>(istream& input, mok& stud) {
     string vardas, pavarde;
     int pazymys, egzaminas;
-    vector<int> namuD;
+    Vector<int> namuD;
     input >> vardas >> pavarde >> egzaminas;
     stud.setvar(vardas);
     stud.setpav(pavarde);
     stud.seteg(egzaminas);
-    stud.getnd().clear();
+    stud.getnd().Clear();
     while (input >> pazymys) {
-        namuD.push_back(pazymys);
+        namuD.PushBack(pazymys);
     }
     stud.setnd(namuD);
     return input;

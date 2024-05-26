@@ -1,14 +1,15 @@
 #include "studentas.h"
 #include "funkcijos.h"
+#include "Vector.hpp"
 
-void ivedimas(vector<mok>& stud) {
+void ivedimas(Vector<mok>& stud) {
     mok naujas_stud;
     cout << "Iveskite studento varda ir pavarde:" << endl;
     string vardas, pavarde;
     cin >> vardas >> pavarde;
     naujas_stud.setvar(vardas);
     naujas_stud.setpav(pavarde);
-    vector<int> pazymiai;
+    Vector<int> pazymiai;
     int pazymys, egzaminas;
 
     cout << "Iveskite studento tarpinius namu darbu rezultatus(noredami uzbaigti, iveskite neigiama skaiciu):" << endl;
@@ -23,10 +24,10 @@ void ivedimas(vector<mok>& stud) {
         if (pazymys < 0) {
             break;
         }
-        pazymiai.push_back(pazymys);
+        pazymiai.PushBack(pazymys);
     }
     try {
-        if (pazymiai.empty()) {
+        if (pazymiai.IsEmpty()) {
             throw runtime_error("Neivestas nei vienas pazymys.");
         }
     }
@@ -44,7 +45,7 @@ void ivedimas(vector<mok>& stud) {
     }
     naujas_stud.seteg(egzaminas);
 
-    stud.push_back(naujas_stud);
+    stud.PushBack(naujas_stud);
 }
 
 void meniu(int& antrasPasirinkimas) {
@@ -62,19 +63,19 @@ void meniu(int& antrasPasirinkimas) {
     }
 }
 
-void calculateResults(vector<mok>& stud) {
+void calculateResults(Vector<mok>& stud) {
 
-    for (int i = 0; i < stud.size(); i++) {
-        vector<int> pazymiai = stud[i].getnd();
-        double sum = accumulate(pazymiai.begin(), pazymiai.end(), 0.0);
-        double vid = sum / pazymiai.size();
+    for (int i = 0; i < stud.Size(); i++) {
+        Vector<int> pazymiai = stud[i].getnd();
+        double sum = accumulate(pazymiai.Begin(), pazymiai.End(), 0.0);
+        double vid = sum / pazymiai.Size();
         stud[i].setgal_vid(0.4 * vid + 0.6 * stud[i].geteg());
-        sort(pazymiai.begin(), pazymiai.end());
-        if (pazymiai.size() % 2 == 0) {
-            stud[i].setgal_med((pazymiai[pazymiai.size() / 2 - 1] + pazymiai[pazymiai.size() / 2]) / 2.0 * 0.4 + 0.6 * stud[i].geteg());
+        sort(pazymiai.Begin(), pazymiai.End());
+        if (pazymiai.Size() % 2 == 0) {
+            stud[i].setgal_med((pazymiai[pazymiai.Size() / 2 - 1] + pazymiai[pazymiai.Size() / 2]) / 2.0 * 0.4 + 0.6 * stud[i].geteg());
         }
         else {
-            stud[i].setgal_med(pazymiai[pazymiai.size() / 2] * 0.4 + 0.6 * stud[i].geteg());
+            stud[i].setgal_med(pazymiai[pazymiai.Size() / 2] * 0.4 + 0.6 * stud[i].geteg());
         }
     }
 }
@@ -91,18 +92,18 @@ char rikiavimoklausimas() {
     }
     return a;
 }
-void isvedimas(vector<mok>& stud, ostream& os, char a) {
+void isvedimas(Vector<mok>& stud, ostream& os, char a) {
 
     if (a == 'V' || a == 'v') {
         os << left << setw(20) << "Pavarde" << setw(20) << "Vardas" << setw(20) << "Galutinis (Vid.)" << endl;
         os << "--------------------------------------------------------------" << endl;
-        for (int i = 0; i < stud.size(); i++) {
+        for (int i = 0; i < stud.Size(); i++) {
             os << left << setw(20) << stud[i].getvar() << setw(20) << stud[i].getpav() << setw(20) << fixed << setprecision(2) << stud[i].getgal_vid() << endl;
         }
     } if (a == 'M' || a == 'm') {
         os << left << setw(20) << "Pavarde" << setw(20) << "Vardas" << setw(20) << "Galutinis (Med.)" << endl;
         os << "--------------------------------------------------------------" << endl;
-        for (int i = 0; i < stud.size(); i++) {
+        for (int i = 0; i < stud.Size(); i++) {
             os << left << setw(20) << stud[i].getvar() << setw(20) << stud[i].getpav() << setw(20) << fixed << setprecision(2) << stud[i].getgal_med() << endl;
         }
     }
@@ -160,39 +161,39 @@ void failuGeneravimas(int studentuKiekis, const string& failoPavadinimas) {
     Stud.str("");
 }
 
-void konteineriai(int studentuKiekis, vector<mok>& studentai, char a, vector<mok>& vargsiukai) {
+void konteineriai(int studentuKiekis, Vector<mok>& studentai, char a, Vector<mok>& vargsiukai) {
     if (a == 'M' || a == 'm') {
-        auto partitionIt = partition(studentai.begin(), studentai.end(),
+        auto partitionIt = partition(studentai.Begin(), studentai.End(),
             [](const mok& student) {
                 return student.getgal_med() < 5;
             });
 
-        vargsiukai.insert(vargsiukai.end(), studentai.begin(), partitionIt);
-        studentai.erase(studentai.begin(), partitionIt);
+        vargsiukai.Insert(vargsiukai.End(), studentai.Begin(), partitionIt);
+        studentai.Erase(studentai.Begin(), partitionIt);
     }
     else {
-        auto partitionIt = partition(studentai.begin(), studentai.end(),
+        auto partitionIt = partition(studentai.Begin(), studentai.End(),
             [](const mok& student) {
                 return student.getgal_vid() < 5;
             });
 
-        vargsiukai.insert(vargsiukai.end(), studentai.begin(), partitionIt);
-        studentai.erase(studentai.begin(), partitionIt);
+        vargsiukai.Insert(vargsiukai.End(), studentai.Begin(), partitionIt);
+        studentai.Erase(studentai.Begin(), partitionIt);
     }
-
 }
 
-void isvalymas(vector<mok>& vektorius) {
-    for (int i = 0; i < vektorius.size(); i++) {
+
+void isvalymas(Vector<mok>& vektorius) {
+    for (int i = 0; i < vektorius.Size(); i++) {
         vektorius[i].isvalymas();
     }
-    vektorius.clear();
+    vektorius.Clear();
 }
 
-void failuNuskaitymas(vector<mok>& studentai, string& failoPavadinimas) {
+void failuNuskaitymas(Vector<mok>& studentai, string& failoPavadinimas) {
     string vardas, pavarde;
     int pazymys, egzaminas;
-    vector<int> pazymiai;
+    Vector<int> pazymiai;
 
     ifstream file;
     do {
@@ -219,7 +220,7 @@ void failuNuskaitymas(vector<mok>& studentai, string& failoPavadinimas) {
         while (iss >> pazymys) {
             try {
                 if (pazymys >= 0 && pazymys <= 10) {
-                    pazymiai.push_back(pazymys);
+                    pazymiai.PushBack(pazymys);
                     laikinasstud.setnd(pazymiai);
                 }
             }
@@ -227,11 +228,11 @@ void failuNuskaitymas(vector<mok>& studentai, string& failoPavadinimas) {
 
             }
         }
-        egzaminas = laikinasstud.getnd().back();
+        egzaminas = laikinasstud.getnd().Back();
         laikinasstud.seteg(egzaminas);
-        laikinasstud.getnd().pop_back();
-        studentai.push_back(laikinasstud);
-        pazymiai.clear();
+        laikinasstud.getnd().PopBack();
+        studentai.PushBack(laikinasstud);
+        pazymiai.Clear();
         iss.clear();
 
     }
@@ -261,26 +262,26 @@ int treciasP(int& treciasPasirinkimas) {
     return treciasPasirinkimas;
 }
 
-void rikiavimas(int ketvirtasPasirinkimas, vector<mok>& studentai) {   //RIKIAVIMAS
+void rikiavimas(int ketvirtasPasirinkimas, Vector<mok>& studentai) {   //RIKIAVIMAS
     switch (ketvirtasPasirinkimas) {
     case 1:
     {
-        sort(studentai.begin(), studentai.end(), pagalVarda);
+        sort(studentai.Begin(), studentai.End(), pagalVarda);
         break;
     }
     case 2:
     {
-        sort(studentai.begin(), studentai.end(), pagalPavarde);
+        sort(studentai.Begin(), studentai.End(), pagalPavarde);
         break;
     }
     case 3:
     {
-        sort(studentai.begin(), studentai.end(), pagalVidurki);
+        sort(studentai.Begin(), studentai.End(), pagalVidurki);
         break;
     }
     case 4:
     {
-        sort(studentai.begin(), studentai.end(), pagalMediana);
+        sort(studentai.Begin(), studentai.End(), pagalMediana);
         break;
     }
     }
