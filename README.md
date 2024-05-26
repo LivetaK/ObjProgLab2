@@ -13,7 +13,7 @@
 | 10 000 000  | 36 ms       | 28 ms       |
 | 100 000 000 | 391 ms      | 340 ms      |
 
-## Atminties perskirstymį skaišius
+## Atminties perskirstymų skaičius
 
 |             | std::vector |    Vector   |
 | ----------- | ----------- | ----------- |
@@ -31,7 +31,8 @@
 | 1 000 000   | 12768 ms    | 9558 ms     |
 | 10 000 000  | 100522 ms   | 98734 ms    |
 
-
+**Išvados**
+Kaip matome, Vector klase veikia greičiau, nei std::vector, ir atlieka mažiau perskirstymų
 
 **V1.5**
 Pridėta bazinė klasė "zmogus":
