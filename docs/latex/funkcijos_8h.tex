@@ -1,0 +1,400 @@
+\doxysection{funkcijos.\+h File Reference}
+\hypertarget{funkcijos_8h}{}\label{funkcijos_8h}\index{funkcijos.h@{funkcijos.h}}
+
+
+siame faile aprasytos kode naudojamos funkcijos  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include "{}Vector.\+hpp"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{funkcijos_8h_ab42d3bf1e949bfd4bd226c90cbee20f1}{ivedimas}} (\mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{classmok}{mok}} $>$ \&stud)
+\begin{DoxyCompactList}\small\item\em Ivedimo funkcija. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funkcijos_8h_a3709938c8a0a76974980e9d054ec333f}{calculate\+Results}} (\mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{classmok}{mok}} $>$ \&stud)
+\begin{DoxyCompactList}\small\item\em Rezultatu skaiciavimo funkcija. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{funkcijos_8h_a67fce8ea0770d14ed6cc024d0428440f}{rikiavimoklausimas}} ()
+\begin{DoxyCompactList}\small\item\em Rikiavimo klausimas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funkcijos_8h_a156fd86494043744a6d4af335c93d25a}{isvedimas}} (\mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{classmok}{mok}} $>$ \&stud, ostream \&os, char a)
+\begin{DoxyCompactList}\small\item\em Isvedimo funkcija. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funkcijos_8h_a1f181c1f1ccc010c2f9f0e58998be667}{meniu}} (int \&antras\+Pasirinkimas)
+\begin{DoxyCompactList}\small\item\em Pirmas meniu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funkcijos_8h_aeb6ec507b355096b55ecf1126512f17c}{meniu\+Antras}} (int \&ketvirtas\+Pasirinkimas)
+\begin{DoxyCompactList}\small\item\em Antras meniu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{funkcijos_8h_a6046d0cc7f35f793203cf06ea1371fca}{pagal\+Varda}} (const \mbox{\hyperlink{classmok}{mok}} \&a, const \mbox{\hyperlink{classmok}{mok}} \&b)
+\begin{DoxyCompactList}\small\item\em Rikiavimo funkcija pagal varda. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{funkcijos_8h_abc327abb3a92e5c97f5ff3263e4259a7}{pagal\+Pavarde}} (const \mbox{\hyperlink{classmok}{mok}} \&a, const \mbox{\hyperlink{classmok}{mok}} \&b)
+\begin{DoxyCompactList}\small\item\em Rikiavimo funkcija pagal pavarde. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{funkcijos_8h_ac1dffc282c2a701e5e0a822750a4bfaa}{pagal\+Mediana}} (const \mbox{\hyperlink{classmok}{mok}} \&a, const \mbox{\hyperlink{classmok}{mok}} \&b)
+\begin{DoxyCompactList}\small\item\em Rikiavimo funkcija pagal mediana. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{funkcijos_8h_a420409df5b1d3f127a8790dd3225a8a7}{pagal\+Vidurki}} (const \mbox{\hyperlink{classmok}{mok}} \&a, const \mbox{\hyperlink{classmok}{mok}} \&b)
+\begin{DoxyCompactList}\small\item\em Rikiavimo funkcija pagal vidurki. \end{DoxyCompactList}\item 
+milliseconds \mbox{\hyperlink{funkcijos_8h_a8665d13dd4ea1bee6d38c6c20ed456a2}{trukmes\+Skaiciavimas}} (high\+\_\+resolution\+\_\+clock\+::time\+\_\+point pradzia, high\+\_\+resolution\+\_\+clock\+::time\+\_\+point pabaiga)
+\begin{DoxyCompactList}\small\item\em Trukmes skaiciavimo funkcija. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funkcijos_8h_acd1e4660c3c197541578d83214d596de}{failu\+Generavimas}} (int studentu\+Kiekis, const string \&failo\+Pavadinimas)
+\begin{DoxyCompactList}\small\item\em Failu generavimo funkcija. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funkcijos_8h_adad159ddefee45202a97fc7d4e42918b}{konteineriai}} (int studentu\+Kiekis, \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{classmok}{mok}} $>$ \&studentai, char a, \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{classmok}{mok}} $>$ \&vargsiukai)
+\begin{DoxyCompactList}\small\item\em Skirstymo i konteinerius funkcija. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funkcijos_8h_a732dc06de2b9f53d0d7d90c81203a170}{isvalymas}} (\mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{classmok}{mok}} $>$ \&vektorius)
+\begin{DoxyCompactList}\small\item\em Vektoriaus isvalymo funkcija. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funkcijos_8h_a2168ff292edccd1cbf905ce3ac12c2ea}{failu\+Nuskaitymas}} (\mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{classmok}{mok}} $>$ \&studentai, string \&failo\+Pavadinimas)
+\begin{DoxyCompactList}\small\item\em Failu nuskaitymo funkcija. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{funkcijos_8h_a1b13b1d0592d280c2702f2dabe6e86b6}{pirmasP}} (int \&pirmas\+Pasirinkimas)
+\begin{DoxyCompactList}\small\item\em Klausimas naudotojui. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{funkcijos_8h_abfbb40470445383820ddc05eb349d63d}{treciasP}} (int \&trecias\+Pasirinkimas)
+\begin{DoxyCompactList}\small\item\em Klausimas naudotojui. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funkcijos_8h_a5a7edd4ea3a055c50434ba0d65a06fcf}{rikiavimas}} (const int ketvirtaspasirinkimas, \mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{classmok}{mok}} $>$ \&studentai)
+\begin{DoxyCompactList}\small\item\em Rikiavimo funkcija. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funkcijos_8h_aa9419267e510bb1f5d6381d328c29850}{testavimo\+Rezultatai}} (bool result, const string \&testas)
+\begin{DoxyCompactList}\small\item\em Testavimo rezultatu funkcija. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+siame faile aprasytos kode naudojamos funkcijos 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{funkcijos_8h_a3709938c8a0a76974980e9d054ec333f}\index{funkcijos.h@{funkcijos.h}!calculateResults@{calculateResults}}
+\index{calculateResults@{calculateResults}!funkcijos.h@{funkcijos.h}}
+\doxysubsubsection{\texorpdfstring{calculateResults()}{calculateResults()}}
+{\footnotesize\ttfamily \label{funkcijos_8h_a3709938c8a0a76974980e9d054ec333f} 
+void calculate\+Results (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{classmok}{mok}} $>$ \&}]{stud}{}\end{DoxyParamCaption})}
+
+
+
+Rezultatu skaiciavimo funkcija. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stud} & Studentu vektorius. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{funkcijos_8h_acd1e4660c3c197541578d83214d596de}\index{funkcijos.h@{funkcijos.h}!failuGeneravimas@{failuGeneravimas}}
+\index{failuGeneravimas@{failuGeneravimas}!funkcijos.h@{funkcijos.h}}
+\doxysubsubsection{\texorpdfstring{failuGeneravimas()}{failuGeneravimas()}}
+{\footnotesize\ttfamily \label{funkcijos_8h_acd1e4660c3c197541578d83214d596de} 
+void failu\+Generavimas (\begin{DoxyParamCaption}\item[{int}]{studentu\+Kiekis}{, }\item[{const string \&}]{failo\+Pavadinimas}{}\end{DoxyParamCaption})}
+
+
+
+Failu generavimo funkcija. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em studentu\+Kiekis} & Studentu Kiekis. \\
+\hline
+{\em failo\+Pavadinimas} & Failo pavadinimas. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{funkcijos_8h_a2168ff292edccd1cbf905ce3ac12c2ea}\index{funkcijos.h@{funkcijos.h}!failuNuskaitymas@{failuNuskaitymas}}
+\index{failuNuskaitymas@{failuNuskaitymas}!funkcijos.h@{funkcijos.h}}
+\doxysubsubsection{\texorpdfstring{failuNuskaitymas()}{failuNuskaitymas()}}
+{\footnotesize\ttfamily \label{funkcijos_8h_a2168ff292edccd1cbf905ce3ac12c2ea} 
+void failu\+Nuskaitymas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{classmok}{mok}} $>$ \&}]{studentai}{, }\item[{string \&}]{failo\+Pavadinimas}{}\end{DoxyParamCaption})}
+
+
+
+Failu nuskaitymo funkcija. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em studentai} & Studentu vektorius. \\
+\hline
+{\em failo\+Pavadinimas} & Failo pavadinimas. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{funkcijos_8h_a732dc06de2b9f53d0d7d90c81203a170}\index{funkcijos.h@{funkcijos.h}!isvalymas@{isvalymas}}
+\index{isvalymas@{isvalymas}!funkcijos.h@{funkcijos.h}}
+\doxysubsubsection{\texorpdfstring{isvalymas()}{isvalymas()}}
+{\footnotesize\ttfamily \label{funkcijos_8h_a732dc06de2b9f53d0d7d90c81203a170} 
+void isvalymas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{classmok}{mok}} $>$ \&}]{vektorius}{}\end{DoxyParamCaption})}
+
+
+
+Vektoriaus isvalymo funkcija. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vektorius} & Vektorius, kuri reikia isvalyti. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{funkcijos_8h_a156fd86494043744a6d4af335c93d25a}\index{funkcijos.h@{funkcijos.h}!isvedimas@{isvedimas}}
+\index{isvedimas@{isvedimas}!funkcijos.h@{funkcijos.h}}
+\doxysubsubsection{\texorpdfstring{isvedimas()}{isvedimas()}}
+{\footnotesize\ttfamily \label{funkcijos_8h_a156fd86494043744a6d4af335c93d25a} 
+void isvedimas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{classmok}{mok}} $>$ \&}]{stud}{, }\item[{ostream \&}]{os}{, }\item[{char}]{a}{}\end{DoxyParamCaption})}
+
+
+
+Isvedimo funkcija. 
+
+Si funkcija naudojama ir isvedimui i faila, ir i ekrana. 
+\begin{DoxyParams}{Parameters}
+{\em stud} & Studentu vektorius. \\
+\hline
+{\em os} & Ivesties srautas. \\
+\hline
+{\em a} & Rikiavimo tipa nurodantis simbolis. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{funkcijos_8h_ab42d3bf1e949bfd4bd226c90cbee20f1}\index{funkcijos.h@{funkcijos.h}!ivedimas@{ivedimas}}
+\index{ivedimas@{ivedimas}!funkcijos.h@{funkcijos.h}}
+\doxysubsubsection{\texorpdfstring{ivedimas()}{ivedimas()}}
+{\footnotesize\ttfamily \label{funkcijos_8h_ab42d3bf1e949bfd4bd226c90cbee20f1} 
+void ivedimas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{classmok}{mok}} $>$ \&}]{stud}{}\end{DoxyParamCaption})}
+
+
+
+Ivedimo funkcija. 
+
+Si funkcija naudojama tik pasirinkus ivedima ranka. 
+\begin{DoxyParams}{Parameters}
+{\em stud} & Studentu vektorius. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{funkcijos_8h_adad159ddefee45202a97fc7d4e42918b}\index{funkcijos.h@{funkcijos.h}!konteineriai@{konteineriai}}
+\index{konteineriai@{konteineriai}!funkcijos.h@{funkcijos.h}}
+\doxysubsubsection{\texorpdfstring{konteineriai()}{konteineriai()}}
+{\footnotesize\ttfamily \label{funkcijos_8h_adad159ddefee45202a97fc7d4e42918b} 
+void konteineriai (\begin{DoxyParamCaption}\item[{int}]{studentu\+Kiekis}{, }\item[{\mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{classmok}{mok}} $>$ \&}]{studentai}{, }\item[{char}]{a}{, }\item[{\mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{classmok}{mok}} $>$ \&}]{vargsiukai}{}\end{DoxyParamCaption})}
+
+
+
+Skirstymo i konteinerius funkcija. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em studentu\+Kiekis} & Studentu kiekis. \\
+\hline
+{\em studentai} & Studentu vektorius. \\
+\hline
+{\em a} & Rikiavimo tipa nurodantis simbolis. \\
+\hline
+{\em vargsiukai} & Vargsiuku vektorius. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{funkcijos_8h_a1f181c1f1ccc010c2f9f0e58998be667}\index{funkcijos.h@{funkcijos.h}!meniu@{meniu}}
+\index{meniu@{meniu}!funkcijos.h@{funkcijos.h}}
+\doxysubsubsection{\texorpdfstring{meniu()}{meniu()}}
+{\footnotesize\ttfamily \label{funkcijos_8h_a1f181c1f1ccc010c2f9f0e58998be667} 
+void meniu (\begin{DoxyParamCaption}\item[{int \&}]{antras\+Pasirinkimas}{}\end{DoxyParamCaption})}
+
+
+
+Pirmas meniu. 
+
+Sis meniu atsiranda tada, kada naudotojas pasirenka duomenis ivedineti ranka. 
+\begin{DoxyParams}{Parameters}
+{\em antras\+Pasirinkimas} & Naudotojo pasirinkimas. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{funkcijos_8h_aeb6ec507b355096b55ecf1126512f17c}\index{funkcijos.h@{funkcijos.h}!meniuAntras@{meniuAntras}}
+\index{meniuAntras@{meniuAntras}!funkcijos.h@{funkcijos.h}}
+\doxysubsubsection{\texorpdfstring{meniuAntras()}{meniuAntras()}}
+{\footnotesize\ttfamily \label{funkcijos_8h_aeb6ec507b355096b55ecf1126512f17c} 
+void meniu\+Antras (\begin{DoxyParamCaption}\item[{int \&}]{ketvirtas\+Pasirinkimas}{}\end{DoxyParamCaption})}
+
+
+
+Antras meniu. 
+
+Naudotojas renkasi, pagal ka isrikiuotus duomenis nori matyti. 
+\begin{DoxyParams}{Parameters}
+{\em ketvirtas\+Pasirinkimas} & Naudotojo pasirinkimas. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{funkcijos_8h_ac1dffc282c2a701e5e0a822750a4bfaa}\index{funkcijos.h@{funkcijos.h}!pagalMediana@{pagalMediana}}
+\index{pagalMediana@{pagalMediana}!funkcijos.h@{funkcijos.h}}
+\doxysubsubsection{\texorpdfstring{pagalMediana()}{pagalMediana()}}
+{\footnotesize\ttfamily \label{funkcijos_8h_ac1dffc282c2a701e5e0a822750a4bfaa} 
+bool pagal\+Mediana (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmok}{mok}} \&}]{a}{, }\item[{const \mbox{\hyperlink{classmok}{mok}} \&}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Rikiavimo funkcija pagal mediana. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Pirmas mok objektas. \\
+\hline
+{\em b} & Antras mok objektas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tiesa, jei pirma mediana yra mazesne uz antra. 
+\end{DoxyReturn}
+\Hypertarget{funkcijos_8h_abc327abb3a92e5c97f5ff3263e4259a7}\index{funkcijos.h@{funkcijos.h}!pagalPavarde@{pagalPavarde}}
+\index{pagalPavarde@{pagalPavarde}!funkcijos.h@{funkcijos.h}}
+\doxysubsubsection{\texorpdfstring{pagalPavarde()}{pagalPavarde()}}
+{\footnotesize\ttfamily \label{funkcijos_8h_abc327abb3a92e5c97f5ff3263e4259a7} 
+bool pagal\+Pavarde (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmok}{mok}} \&}]{a}{, }\item[{const \mbox{\hyperlink{classmok}{mok}} \&}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Rikiavimo funkcija pagal pavarde. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Pirmas mok objektas. \\
+\hline
+{\em b} & Antras mok objektas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tiesa, jei pirma pavarde yra zemiau uz antra. 
+\end{DoxyReturn}
+\Hypertarget{funkcijos_8h_a6046d0cc7f35f793203cf06ea1371fca}\index{funkcijos.h@{funkcijos.h}!pagalVarda@{pagalVarda}}
+\index{pagalVarda@{pagalVarda}!funkcijos.h@{funkcijos.h}}
+\doxysubsubsection{\texorpdfstring{pagalVarda()}{pagalVarda()}}
+{\footnotesize\ttfamily \label{funkcijos_8h_a6046d0cc7f35f793203cf06ea1371fca} 
+bool pagal\+Varda (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmok}{mok}} \&}]{a}{, }\item[{const \mbox{\hyperlink{classmok}{mok}} \&}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Rikiavimo funkcija pagal varda. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Pirmas mok objektas. \\
+\hline
+{\em b} & Antras mok objektas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tiesa, jei pirmas vardas yra zemiau uz antra. 
+\end{DoxyReturn}
+\Hypertarget{funkcijos_8h_a420409df5b1d3f127a8790dd3225a8a7}\index{funkcijos.h@{funkcijos.h}!pagalVidurki@{pagalVidurki}}
+\index{pagalVidurki@{pagalVidurki}!funkcijos.h@{funkcijos.h}}
+\doxysubsubsection{\texorpdfstring{pagalVidurki()}{pagalVidurki()}}
+{\footnotesize\ttfamily \label{funkcijos_8h_a420409df5b1d3f127a8790dd3225a8a7} 
+bool pagal\+Vidurki (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmok}{mok}} \&}]{a}{, }\item[{const \mbox{\hyperlink{classmok}{mok}} \&}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Rikiavimo funkcija pagal vidurki. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Pirmas mok objektas. \\
+\hline
+{\em b} & Antras mok objektas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tiesa, jei pirmas vidurkis yra mazesnis uz antra. 
+\end{DoxyReturn}
+\Hypertarget{funkcijos_8h_a1b13b1d0592d280c2702f2dabe6e86b6}\index{funkcijos.h@{funkcijos.h}!pirmasP@{pirmasP}}
+\index{pirmasP@{pirmasP}!funkcijos.h@{funkcijos.h}}
+\doxysubsubsection{\texorpdfstring{pirmasP()}{pirmasP()}}
+{\footnotesize\ttfamily \label{funkcijos_8h_a1b13b1d0592d280c2702f2dabe6e86b6} 
+int pirmasP (\begin{DoxyParamCaption}\item[{int \&}]{pirmas\+Pasirinkimas}{}\end{DoxyParamCaption})}
+
+
+
+Klausimas naudotojui. 
+
+Funkcija, kuri klausia naudotojo ar jis nori duomenis ivesti ranka, ar nuskaityti is failo. 
+\begin{DoxyParams}{Parameters}
+{\em pirmas\+Pasirinkimas} & Naudotojo pasirinkimas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Naudotojo pasirinkimas. 
+\end{DoxyReturn}
+\Hypertarget{funkcijos_8h_a5a7edd4ea3a055c50434ba0d65a06fcf}\index{funkcijos.h@{funkcijos.h}!rikiavimas@{rikiavimas}}
+\index{rikiavimas@{rikiavimas}!funkcijos.h@{funkcijos.h}}
+\doxysubsubsection{\texorpdfstring{rikiavimas()}{rikiavimas()}}
+{\footnotesize\ttfamily \label{funkcijos_8h_a5a7edd4ea3a055c50434ba0d65a06fcf} 
+void rikiavimas (\begin{DoxyParamCaption}\item[{const int}]{ketvirtaspasirinkimas}{, }\item[{\mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{classmok}{mok}} $>$ \&}]{studentai}{}\end{DoxyParamCaption})}
+
+
+
+Rikiavimo funkcija. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ketvirtaspasirinkimas} & Ketvirtas pasirinkimas. \\
+\hline
+{\em studentai} & Studentu vektorius. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{funkcijos_8h_a67fce8ea0770d14ed6cc024d0428440f}\index{funkcijos.h@{funkcijos.h}!rikiavimoklausimas@{rikiavimoklausimas}}
+\index{rikiavimoklausimas@{rikiavimoklausimas}!funkcijos.h@{funkcijos.h}}
+\doxysubsubsection{\texorpdfstring{rikiavimoklausimas()}{rikiavimoklausimas()}}
+{\footnotesize\ttfamily \label{funkcijos_8h_a67fce8ea0770d14ed6cc024d0428440f} 
+char rikiavimoklausimas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Rikiavimo klausimas. 
+
+\begin{DoxyReturn}{Returns}
+Simbolis, nurodantis pagal ka bus rikiuojami duomenys. 
+\end{DoxyReturn}
+\Hypertarget{funkcijos_8h_aa9419267e510bb1f5d6381d328c29850}\index{funkcijos.h@{funkcijos.h}!testavimoRezultatai@{testavimoRezultatai}}
+\index{testavimoRezultatai@{testavimoRezultatai}!funkcijos.h@{funkcijos.h}}
+\doxysubsubsection{\texorpdfstring{testavimoRezultatai()}{testavimoRezultatai()}}
+{\footnotesize\ttfamily \label{funkcijos_8h_aa9419267e510bb1f5d6381d328c29850} 
+void testavimo\+Rezultatai (\begin{DoxyParamCaption}\item[{bool}]{result}{, }\item[{const string \&}]{testas}{}\end{DoxyParamCaption})}
+
+
+
+Testavimo rezultatu funkcija. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & Testo rezultatas. \\
+\hline
+{\em testas} & Testo pavadinimas. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{funkcijos_8h_abfbb40470445383820ddc05eb349d63d}\index{funkcijos.h@{funkcijos.h}!treciasP@{treciasP}}
+\index{treciasP@{treciasP}!funkcijos.h@{funkcijos.h}}
+\doxysubsubsection{\texorpdfstring{treciasP()}{treciasP()}}
+{\footnotesize\ttfamily \label{funkcijos_8h_abfbb40470445383820ddc05eb349d63d} 
+int treciasP (\begin{DoxyParamCaption}\item[{int \&}]{trecias\+Pasirinkimas}{}\end{DoxyParamCaption})}
+
+
+
+Klausimas naudotojui. 
+
+Funkcija, kuri klausia naudotojo ar jis nori, kad duomenys butu isvesti ekrane, ar i faila. 
+\begin{DoxyParams}{Parameters}
+{\em trecias\+Pasirinkimas} & Naudotojo pasirinkimas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Naudotojo pasirinkimas. 
+\end{DoxyReturn}
+\Hypertarget{funkcijos_8h_a8665d13dd4ea1bee6d38c6c20ed456a2}\index{funkcijos.h@{funkcijos.h}!trukmesSkaiciavimas@{trukmesSkaiciavimas}}
+\index{trukmesSkaiciavimas@{trukmesSkaiciavimas}!funkcijos.h@{funkcijos.h}}
+\doxysubsubsection{\texorpdfstring{trukmesSkaiciavimas()}{trukmesSkaiciavimas()}}
+{\footnotesize\ttfamily \label{funkcijos_8h_a8665d13dd4ea1bee6d38c6c20ed456a2} 
+milliseconds trukmes\+Skaiciavimas (\begin{DoxyParamCaption}\item[{high\+\_\+resolution\+\_\+clock\+::time\+\_\+point}]{pradzia}{, }\item[{high\+\_\+resolution\+\_\+clock\+::time\+\_\+point}]{pabaiga}{}\end{DoxyParamCaption})}
+
+
+
+Trukmes skaiciavimo funkcija. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pradzia} & Pradzios laikas. \\
+\hline
+{\em pabaiga} & Pabaigos laikas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Trukmes intervalas milisekundemis. 
+\end{DoxyReturn}

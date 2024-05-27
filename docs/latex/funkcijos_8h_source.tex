@@ -1,0 +1,64 @@
+\doxysection{funkcijos.\+h}
+\hypertarget{funkcijos_8h_source}{}\label{funkcijos_8h_source}\mbox{\hyperlink{funkcijos_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ FUNKCIJOS\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ FUNKCIJOS\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <numeric>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_vector_8hpp}{Vector.hpp}}"{}}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00023\ \textcolor{keyword}{using\ namespace\ }std::chrono;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{funkcijos_8h_ab42d3bf1e949bfd4bd226c90cbee20f1}{ivedimas}}(\mbox{\hyperlink{class_vector}{Vector<mok>}}\&\ stud);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{funkcijos_8h_a3709938c8a0a76974980e9d054ec333f}{calculateResults}}(\mbox{\hyperlink{class_vector}{Vector<mok>}}\&\ stud);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{funkcijos_8h_a67fce8ea0770d14ed6cc024d0428440f}{rikiavimoklausimas}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00051\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{funkcijos_8h_a156fd86494043744a6d4af335c93d25a}{isvedimas}}(\mbox{\hyperlink{class_vector}{Vector<mok>}}\&\ stud,\ ostream\&\ os,\ \textcolor{keywordtype}{char}\ a);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{funkcijos_8h_a1f181c1f1ccc010c2f9f0e58998be667}{meniu}}(\textcolor{keywordtype}{int}\&\ antrasPasirinkimas);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{funkcijos_8h_aeb6ec507b355096b55ecf1126512f17c}{meniuAntras}}(\textcolor{keywordtype}{int}\&\ ketvirtasPasirinkimas);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00073\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{funkcijos_8h_a6046d0cc7f35f793203cf06ea1371fca}{pagalVarda}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classmok}{mok}}\&\ a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmok}{mok}}\&\ b);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00081\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{funkcijos_8h_abc327abb3a92e5c97f5ff3263e4259a7}{pagalPavarde}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classmok}{mok}}\&\ a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmok}{mok}}\&\ b);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00089\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{funkcijos_8h_ac1dffc282c2a701e5e0a822750a4bfaa}{pagalMediana}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classmok}{mok}}\&\ a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmok}{mok}}\&\ b);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00097\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{funkcijos_8h_a420409df5b1d3f127a8790dd3225a8a7}{pagalVidurki}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classmok}{mok}}\&\ a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmok}{mok}}\&\ b);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00105\ milliseconds\ \mbox{\hyperlink{funkcijos_8h_a8665d13dd4ea1bee6d38c6c20ed456a2}{trukmesSkaiciavimas}}(high\_resolution\_clock::time\_point\ pradzia,\ high\_resolution\_clock::time\_point\ pabaiga);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00112\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{funkcijos_8h_acd1e4660c3c197541578d83214d596de}{failuGeneravimas}}(\textcolor{keywordtype}{int}\ studentuKiekis,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ failoPavadinimas);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00121\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{funkcijos_8h_adad159ddefee45202a97fc7d4e42918b}{konteineriai}}(\textcolor{keywordtype}{int}\ studentuKiekis,\ \mbox{\hyperlink{class_vector}{Vector<mok>}}\&\ studentai,\ \textcolor{keywordtype}{char}\ a,\ \mbox{\hyperlink{class_vector}{Vector<mok>}}\&\ vargsiukai);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00127\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{funkcijos_8h_a732dc06de2b9f53d0d7d90c81203a170}{isvalymas}}(\mbox{\hyperlink{class_vector}{Vector<mok>}}\&\ vektorius);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00134\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{funkcijos_8h_a2168ff292edccd1cbf905ce3ac12c2ea}{failuNuskaitymas}}(\mbox{\hyperlink{class_vector}{Vector<mok>}}\&\ studentai,\ \textcolor{keywordtype}{string}\&\ failoPavadinimas);}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00142\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{funkcijos_8h_a1b13b1d0592d280c2702f2dabe6e86b6}{pirmasP}}(\textcolor{keywordtype}{int}\&\ pirmasPasirinkimas);}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00150\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{funkcijos_8h_abfbb40470445383820ddc05eb349d63d}{treciasP}}(\textcolor{keywordtype}{int}\&\ treciasPasirinkimas);}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00157\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{funkcijos_8h_a5a7edd4ea3a055c50434ba0d65a06fcf}{rikiavimas}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ ketvirtaspasirinkimas,\ \mbox{\hyperlink{class_vector}{Vector<mok>}}\&\ studentai);}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00164\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{funkcijos_8h_aa9419267e510bb1f5d6381d328c29850}{testavimoRezultatai}}(\textcolor{keywordtype}{bool}\ result,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ testas);}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
